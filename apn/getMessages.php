@@ -10,7 +10,9 @@ print '<messages>';
      (isset( $_GET["acr"]) &&  isset($_GET["memId"]))) {
     $acr = isset($_POST["acr"]) ? $_POST["acr"]: $_GET["acr"];
     $memid =isset($_POST["memId"]) ? $_POST["memId"]: $_GET["memId"];
-    // Store user details in db
+    
+	
+	echo $acr.$memid;
     require '../db_functions_apn.php';
     
 	$db = new DbFunctionsAPN();
