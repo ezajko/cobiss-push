@@ -26,7 +26,7 @@ class DB_Connect {
         $con = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 		
         // selecting database
-        mysql_select_db($DB_DATABASE);
+        mysql_select_db(DB_DATABASE);
 		mysql_query ('SET NAMES utf8');
         // return database handler
         return $con;
