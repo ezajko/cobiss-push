@@ -1,6 +1,6 @@
 ﻿<?php
 //echo 'vrh';
-if (isset($_GET["memId"]) && $_GET["acr"]) && isset($_GET["message"]) && isset($_GET["title"])) {
+//if (isset($_GET["memId"]) && $_GET["acr"]) && isset($_GET["message"]) && isset($_GET["title"])) {
     $message = $_GET["message"];
 	$title = $_GET["title"];
 	$acr = $_GET["acr"];
@@ -15,5 +15,5 @@ if (isset($_GET["memId"]) && $_GET["acr"]) && isset($_GET["message"]) && isset($
     $result = $gcm->send_notification($registatoin_ids, $title, $message, $acr, $memid);
 	//echo 'aafaf';
     echo $result;
-}
+//}
 ?>
