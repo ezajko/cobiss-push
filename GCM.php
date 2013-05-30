@@ -1,6 +1,6 @@
 ﻿<?php
  
-class GCM {
+class GCMsender {
  
     //put your code here
     // constructor

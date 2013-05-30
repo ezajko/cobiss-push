@@ -6,14 +6,11 @@
  */
 print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
 print '<messages>';
- if ((isset($_POST["acr"]) && isset($_POST["memId"])) ||
-     (isset( $_GET["acr"]) &&  isset($_GET["memId"]))) {
-    $acr = isset($_POST["acr"]) ? $_POST["acr"]: $_GET["acr"];
-    $memid =isset($_POST["memId"]) ? $_POST["memId"]: $_GET["memId"];
+ if (isset($_REQUEST["acr"]) && isset($_REQUEST["memId"])) {
+    $acr =  $_REQUEST["acr"];
+    $memid =$_REQUEST["memId"];
     
-	
-	echo $acr.$memid;
-    require '../db_functions_apn.php';
+    require '../DbFunctionsAPN.php';
     
 	$db = new DbFunctionsAPN();
     
@@ -24,7 +21,7 @@ print '<messages>';
 		$no_of_msgs = 0;
 	while ($row = mysql_fetch_array($res)) {+
 		print '<message>';
-		print '<id>'.$row["id"].'</id>';
+		print '<id>'.$row["mid"].'</id>';
 		print '<title>'.$row["title"].'</title>';
 		print '<content>'.$row["message"].'</content>';
 		print '<msgread>'.$row["msgread"].'</msgread>';
