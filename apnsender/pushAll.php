@@ -42,9 +42,10 @@ if ($no_of_users>0) {
 	
 	$notifications=array();
 	foreach ($tokens as &$token) {
-		print "\n\ntoken=".$token."\ncount=".$apn->getUnreadCount($token);
 		$notification->token=$token;
 		$notification->count=$apn->getUnreadCount($token);
+		
+		print "\n\ntoken=".$notification->token."\ncount=".$notification->count;
 		$notifications[]=$notification;
 	}
 } else exit;
