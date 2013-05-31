@@ -19,8 +19,6 @@
  * @version $Id$
  */
 
-define('VALID_TOKEN', '1e82db91c7ceddd72bf33d74ae052ac9c84a065b35148ac401388843106a7485');
-define('INVALID_TOKEN', 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff');
 
 print "sending script";
 // Adjust to your timezone
@@ -44,6 +42,7 @@ if ($no_of_users>0) {
 	
 	$notifications=array();
 	foreach ($tokens as &$token) {
+		print "\n\ntoken=".$token."\ncount=".$apn->getUnreadCount($token);
 		$notification->token=$token;
 		$notification->count=$apn->getUnreadCount($token);
 		$notifications[]=$notification;
@@ -54,11 +53,11 @@ if ($no_of_users>0) {
 // Instanciate a new ApnsPHP_Push object
 $push = new ApnsPHP_Push(
 	ApnsPHP_Abstract::ENVIRONMENT_SANDBOX,
-	'server_certificates_bundle_sandbox.pem'
+	'../mcobiss.pem'
 );
 
 // Set the Root Certificate Autority to verify the Apple remote peer
-$push->setRootCertificationAuthority('../mcobiss.pem');
+$push->setRootCertificationAuthority('entrust_root_certification_authority.pem');
 
 // Increase write interval to 100ms (default value is 10ms).
 // This is an example value, the 10ms default value is OK in most cases.
