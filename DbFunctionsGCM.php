@@ -51,7 +51,8 @@ class DbFunctionsGCM {
     		return FALSE;
     	}
     	
-    	$uid=mysql_fetch_array($result)["uid"];
+    	$row=mysql_fetch_array($result);
+    	$uid=$row["uid"];
     	    	
     	$result=mysql_query("SELECT tid FROM $this->tokenTable WHERE uid='$uid' and token='$dev_id'");
     	if (mysql_num_rows($result) == 0) {
@@ -67,7 +68,8 @@ class DbFunctionsGCM {
     		return FALSE;
     	}
     	
-    	$uid=mysql_fetch_array($result)["uid"];
+    	$row=mysql_fetch_array($result);
+    	$uid=$row["uid"];
     	    	
     	$result=mysql_query("SELECT tid FROM $this->tokenTable WHERE uid='$uid' and token='$dev_id'");
     	if (mysql_num_rows($result) == 0) {
@@ -85,8 +87,11 @@ class DbFunctionsGCM {
     	if (mysql_num_rows($result) == 0) {
     		$uid=0;
     	}
-    	else 
-    		$uid=mysql_fetch_array($result)["uid"];
+    	else {
+    		$row=mysql_fetch_array($result);
+    		$uid=$row["uid"];
+    	}
+    		
     	
     	$result=mysql_query("SELECT token FROM $this->tokenTable WHERE uid='$uid'");
     	

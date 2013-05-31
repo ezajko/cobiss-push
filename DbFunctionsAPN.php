@@ -28,7 +28,7 @@ class DbFunctionsAPN extends DbFunctionsGCM {
 	
 	public function getUnreadCount($tokenAPN) {
 		// get all members the device is registered to be notified about
-		$result=mysql_query("SELECT uid FROM '$tokenTable' WHERE token='$tokenAPN'");
+		$result=mysql_query("SELECT uid FROM '$this->tokenTable' WHERE token='$tokenAPN'");
 		if (mysql_num_rows($result) == 0)
 			return 0;
 		
