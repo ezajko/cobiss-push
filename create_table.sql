@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `messages` (
 
 
 CREATE TABLE IF NOT EXISTS `gcm_tokens` (
-	`gcmid` int(11) NOT NULL AUTO_INCREMENT,
+	`tid` int(11) NOT NULL AUTO_INCREMENT,
 	`uid` int(11),
 	`token` text,
 	PRIMARY KEY (`gcmid`),
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `gcm_tokens` (
 
 
 CREATE TABLE IF NOT EXISTS `apn_tokens` (
-	`apnid` int(11) NOT NULL AUTO_INCREMENT,
+	`tid` int(11) NOT NULL AUTO_INCREMENT,
 	`uid` int(11),
 	`token` text,
 	PRIMARY KEY (`apnid`),
