@@ -16,12 +16,12 @@ class DB_Connect {
     public function connect() {
        // require_once 'config.php';
 	    require_once 'config.php';
-	    
+	    /*
 		$DB_HOST= "localhost";
 		$DB_USER= "root";
 		$DB_PASSWORD= "";
 		$DB_DATABASE= "push";
-        
+        */
         // connecting to mysql
        // $con = mysql_connect($DB_HOST, $DB_USER, $DB_PASSWORD);
 		// selecting database
