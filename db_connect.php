@@ -15,7 +15,7 @@ class DB_Connect {
     // Connecting to database
     public function connect() {
        // require_once 'config.php';
-	    //require_once 'config.php';
+	    require_once 'config.php';
 	    
 		$DB_HOST= "localhost";
 		$DB_USER= "root";
@@ -23,9 +23,14 @@ class DB_Connect {
 		$DB_DATABASE= "push";
         
         // connecting to mysql
-        $con = mysql_connect($DB_HOST, $DB_USER, $DB_PASSWORD);
+       // $con = mysql_connect($DB_HOST, $DB_USER, $DB_PASSWORD);
 		// selecting database
-        mysql_select_db($DB_DATABASE);
+        //mysql_select_db($DB_DATABASE);
+		
+		 $con = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+		
+        // selecting database
+        mysql_select_db(DB_DATABASE);
 		mysql_query ('SET NAMES utf8');
         // return database handler
         return $con;
