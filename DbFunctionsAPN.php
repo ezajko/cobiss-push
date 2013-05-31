@@ -31,7 +31,7 @@ class DbFunctionsAPN extends DbFunctionsGCM {
 		$result=mysql_query("SELECT uid FROM $this->tokenTable WHERE token='$tokenAPN'");
 		if (mysql_num_rows($result) == 0)
 			return 0;
-		print " begin ";
+		//print " begin ";
 		// build list of member ids
 		$uids=array();
 		while ($row = mysql_fetch_array($result)) {
