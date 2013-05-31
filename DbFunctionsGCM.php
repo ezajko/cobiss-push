@@ -37,7 +37,9 @@ class DbFunctionsGCM {
     	}
     	
     	$result=mysql_query("SELECT tid FROM $this->tokenTable WHERE uid='$uid' and token='$dev_id'");
-    	if (mysql_num_rows($result) == 0) {
+    	$count=mysql_num_rows($result);
+    	print $count;
+    	if ($count == 0) {
     		$result = mysql_query("INSERT INTO $this->tokenTable (uid, token) VALUES('$uid','$dev_id')");
     	}
     	
