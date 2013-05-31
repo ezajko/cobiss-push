@@ -8,7 +8,7 @@ if (isset($_GET["acr"]) && isset($_GET["message"]) && isset($_GET["title"])) {
 	$memid = $_GET["memId"];
 	
  //   include_once '../APN.php';
-	include_once '../db_functions_apn.php';
+	include_once '../DbFunctionsAPN.php';
 	print "saving ".$title;
 	echo $message;
     $apn = new DbFunctionsAPN();

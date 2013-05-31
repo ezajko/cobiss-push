@@ -93,8 +93,7 @@
     </head>
     <body>
         <?php
-	 	require_once('../db_functions_gcm.php');
-        include_once('../db_functions_apn.php');
+	 	
         include_once('../db_functions_common.php');
         
 		$com = new DbFunctionsCommon();

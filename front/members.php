@@ -92,10 +92,11 @@
         </style>
     </head>
     <body>
+    
         <?php
-	 	require_once('../db_functions_gcm.php');
-        include_once('../db_functions_apn.php');
-        include_once('../db_functions_common.php');
+	 	require_once('../DbFunctionsGCM.php');
+        require_once('../DbFunctionsAPN.php');
+        require_once('../DbFunctionsCommon.php');
         
 		$com = new DbFunctionsCommon();
         $gcm = new DbFunctionsGCM();
@@ -106,8 +107,10 @@
         else
             $no_of_users = 0;
         ?>
+        
         <div class="container">
             <h1>No of Members Registered: <?php echo $no_of_users; ?></h1>
+          
             <hr/>
             <ul class="devices">
                 <?php
@@ -117,8 +120,8 @@
                     while ($row = mysql_fetch_array($users)) {
                         ?>
                         <li>
-                            <form id="<?php echo $row["id"] ?>" name="" method="post" onsubmit="return sendPushNotification('<?php echo $row["id"] ?>')">
-								<label>Acronim: </label> <span><?php echo $row["acr"] ?></span>
+                            <form id="<?php echo $row["uid"] ?>" name="" method="post" onsubmit="return sendPushNotification('<?php echo $row["id"] ?>')">
+								<label>acronym: </label> <span><?php echo $row["acr"] ?></span>
                                 <div class="clear"></div>
                                 <label>member:</label> <span><?php echo $row["memid"] ?></span>
                                 <div class="clear"></div>
@@ -128,10 +131,11 @@
 										$no_of_users = mysql_num_rows($android);
 									else
 										$no_of_users = 0;
-									if ($no_of_users > 0)
-									while ($device = mysql_fetch_array($android)) {
-										echo $device["dev_id"]."<br/>";
-									}
+									echo $no_of_users;
+									//if ($no_of_users > 0)
+									//while ($device = mysql_fetch_array($android)) {
+									//	echo $device["token"]."<br/>";
+									//}
 									?><br/></span>
                                 <div class="clear"></div>
                                 <label>ios:</label> <span><?php
@@ -140,10 +144,11 @@
 										$no_of_users = mysql_num_rows($ios);
 									else
 										$no_of_users = 0;
+									echo $no_of_users;/*
 									if ($no_of_users > 0)
 									while ($d = mysql_fetch_array($ios)) {
-										echo $d["dev_id"]."<br/>";
-									}
+										echo $d["token"]."<br/>";
+									}*/
 									?></span>
                                 <div class="clear"></div>
                                 <div class="send_container">

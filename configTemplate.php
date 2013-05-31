@@ -11,4 +11,12 @@ define("DB_DATABASE", "gcm");
  * Google API Key
  */
 define("GOOGLE_API_KEY", "DSDASDASDASD"); // Place your Google API Key
+
+
+/*
+ * Apple APN stuff
+ */
+define("PASSPHRASE ", "pushchat");
+
+
 ?>
