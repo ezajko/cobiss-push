@@ -15,8 +15,9 @@ class DbFunctionsAPN extends DbFunctionsGCM {
     	if (mysql_num_rows($result) == 0)
     		return -1;
     	
-    	$uid=mysql_fetch_array($result)["uid"];
-    	    	
+    	$row=mysql_fetch_array($result);
+    	$uid=$row["uid"];
+    	//    var_dump(mysql_fetch_array($result));
 		$unread=0;
 		$result = mysql_query("INSERT INTO messages (uid, title, message, msgread, created_at) VALUES('$uid','$title','$message',0, NOW())");
         
