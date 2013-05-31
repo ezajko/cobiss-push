@@ -22,6 +22,7 @@
 define('VALID_TOKEN', '1e82db91c7ceddd72bf33d74ae052ac9c84a065b35148ac401388843106a7485');
 define('INVALID_TOKEN', 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff');
 
+print "sending script";
 // Adjust to your timezone
 date_default_timezone_set('Europe/Rome');
 
