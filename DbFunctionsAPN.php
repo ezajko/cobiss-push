@@ -34,7 +34,7 @@ class DbFunctionsAPN extends DbFunctionsGCM {
 		
 		// build list of member ids
 		$uids=array();
-		while ($row = mysql_fetch_array($users)) {
+		while ($row = mysql_fetch_array($result)) {
 			$uids[]=$row["uid"];
 		}
 		
