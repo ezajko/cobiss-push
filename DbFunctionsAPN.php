@@ -36,6 +36,7 @@ class DbFunctionsAPN extends DbFunctionsGCM {
 		$uids=array();
 		while ($row = mysql_fetch_array($result)) {
 			$uids[]=$row["uid"];
+			print " ".$row["uid"]." ";
 		}
 		
 		// count unread messages addressed to all members registered to device
