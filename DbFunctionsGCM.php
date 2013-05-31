@@ -32,8 +32,8 @@ class DbFunctionsGCM {
     		//echo "vpisal ".$uid;
     	}
     	else {
-    		$uid=mysql_fetch_array($result)["uid"];
-    		//echo "obstaja ".$uid;
+    		$row=mysql_fetch_array($result);
+    		$uid=$row["uid"];
     	}
     	
     	$result=mysql_query("SELECT tid FROM $this->tokenTable WHERE uid='$uid' and token='$dev_id'");
