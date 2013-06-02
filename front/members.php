@@ -12,17 +12,17 @@
                 var data = $('form#'+id).serialize();
                 $('form#'+id).unbind('submit');
                 $.ajax({
-                    url: "send_message.php",
+                    url: "send_to_member.php",
                     type: 'GET',
                     data: data,
                     beforeSend: function() {
  
                     },
                     success: function(data, textStatus, xhr) {
-                          $('.txt_message').val("");
+                          window.alert("ok "+data);
                     },
                     error: function(xhr, textStatus, errorThrown) {
- 
+                    	 window.alert("fail ");
                     }
                 });
                 return false;
@@ -120,7 +120,7 @@
                     while ($row = mysql_fetch_array($users)) {
                         ?>
                         <li>
-                            <form id="<?php echo $row["uid"] ?>" name="" method="post" onsubmit="return sendPushNotification('<?php echo $row["id"] ?>')">
+                            <form id="<?php echo $row["uid"] ?>" name="" method="post" onsubmit="return sendPushNotification('<?php echo $row["uid"] ?>')">
 								<label>acronym: </label> <span><?php echo $row["acr"] ?></span>
                                 <div class="clear"></div>
                                 <label>member:</label> <span><?php echo $row["memid"] ?></span>
@@ -131,12 +131,7 @@
 										$no_of_users = mysql_num_rows($android);
 									else
 										$no_of_users = 0;
-									echo $no_of_users;
-									//if ($no_of_users > 0)
-									//while ($device = mysql_fetch_array($android)) {
-									//	echo $device["token"]."<br/>";
-									//}
-									?><br/></span>
+									echo $no_of_users;?><br/></span>
                                 <div class="clear"></div>
                                 <label>ios:</label> <span><?php
 									$ios=$apn->getAllRegistrationIds($row["acr"],$row["memid"]);
@@ -144,12 +139,7 @@
 										$no_of_users = mysql_num_rows($ios);
 									else
 										$no_of_users = 0;
-									echo $no_of_users;/*
-									if ($no_of_users > 0)
-									while ($d = mysql_fetch_array($ios)) {
-										echo $d["token"]."<br/>";
-									}*/
-									?></span>
+									echo $no_of_users;?></span>
                                 <div class="clear"></div>
                                 <div class="send_container">
 									<textarea rows="1" name="title" cols="25" class="txt_message" placeholder="Type title here"></textarea>
@@ -157,7 +147,7 @@
                                     <textarea rows="3" name="message" cols="25" class="txt_message" placeholder="Type message here"></textarea>
 									<div class="cb"></div>
                                     <input type="hidden" name="acr" value="<?php echo $row["acr"] ?>"/>
-                                    <input type="hidden" name="memId" value="<?php echo $row["memid"] ?>"/>
+                                    <input type="hidden" name="memid" value="<?php echo $row["memid"] ?>"/>
                                     <input type="submit" class="send_btn" value="Send" onclick=""/>
                                 </div>
                             </form>

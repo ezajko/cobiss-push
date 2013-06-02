@@ -32,28 +32,22 @@ if (isset($_REQUEST["acr"]) && isset($_REQUEST["memId"]) && isset($_REQUEST["tit
 	 //dump($xml);
 	print '<Push><Status>';
 	
-	include_once '../DbFunctionsGCM.php';
-	include_once '../DbFunctionsAPN.php';
-	
-	
-    
-	$gcm = new DbFunctionsGCM();
+	include_once '../lib/DbFunctionsGCM.php';
+	include_once '../lib/DbFunctionsAPN.php';
 	
 	
 	print '<gcm>';
+	$gcm = new DbFunctionsGCM();
 	$users=$gcm->getAllRegistrationIds($LibraryId,$MemberId);
 	if ($users==0 || mysql_num_rows($users)==0) print 'no reg ids';
 	else {
-		
-		include_once '../GCM.php';
+		include_once '../lib/GCMsender.php';
 		$gcm = new GCMsender();
 		$ids=array();
 		while ($row = mysql_fetch_array($users)) {
 			$ids[]=$row["token"];
-			echo "would send to ".$row["token"]."\n";
 		}
-		//$result = $gcm->send_notification($ids, $Title, $Message, $LibraryId, $MemberId);
-		//echo($result);
+		$result = $gcm->send_notification($ids, $Title, $Message, $LibraryId, $MemberId);
 	}
 	print '</gcm>';
 
