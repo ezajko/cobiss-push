@@ -10,7 +10,7 @@ print '<messages>';
     $acr =  $_REQUEST["acr"];
     $memid =$_REQUEST["memId"];
     
-    require '../DbFunctionsAPN.php';
+    require '../lib/DbFunctionsAPN.php';
     
 	$db = new DbFunctionsAPN();
     

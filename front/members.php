@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Members</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script type="text/javascript">
@@ -94,9 +94,9 @@
     <body>
     
         <?php
-	 	require_once('../DbFunctionsGCM.php');
-        require_once('../DbFunctionsAPN.php');
-        require_once('../DbFunctionsCommon.php');
+	 	require_once('../lib/DbFunctionsGCM.php');
+        require_once('../lib/DbFunctionsAPN.php');
+        require_once('../lib/DbFunctionsCommon.php');
         
 		$com = new DbFunctionsCommon();
         $gcm = new DbFunctionsGCM();

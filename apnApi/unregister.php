@@ -12,7 +12,7 @@ if (isset($_REQUEST["acr"]) && isset($_REQUEST["memId"]) && isset($_REQUEST["reg
     $memid = $_REQUEST["memId"];
     $token = $_REQUEST["regId"]; // GCM Registration ID
     // Store user details in db
-    require '../DbFunctionsAPN.php';
+    require '../lib/DbFunctionsAPN.php';
     
 	$db = new DbFunctionsAPN();
     

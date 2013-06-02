@@ -9,7 +9,7 @@ print '<messages>';
 if (isset($_REQUEST["mid"])) {
     $mid = $_REQUEST["mid"];
     // Store user details in db
-    require '../DbFunctionsAPN.php';
+    require '../lib/DbFunctionsAPN.php';
     
 	$db = new DbFunctionsAPN();
     $res = $db->markMessageAsRead($mid);

@@ -12,7 +12,7 @@ print '<GCM>';
     $memid = $_REQUEST["memId"];
     $token = $_REQUEST["regId"]; // GCM Registration ID
     // Store user details in db
-    require_once '../DbFunctionsGCM.php';
+    require_once '../lib/DbFunctionsGCM.php';
     
 	$db = new DbFunctionsGCM();
     
@@ -26,6 +26,6 @@ print '<GCM>';
 } else {
     print 'Bad request';
 }
-print '</APN>';
+print '</GCM>';
 
 ?>
