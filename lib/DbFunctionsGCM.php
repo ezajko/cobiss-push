@@ -210,7 +210,7 @@ class DbFunctionsGCM {
 	}
 	
 	public function getDistinctTokens() {
-		return mysql_query("SELECT DISTINCT token FROM `$this->tokenTable`");
+		return mysql_query("SELECT DISTINCT tid, token FROM `$this->tokenTable`");
 	}
 
 }
