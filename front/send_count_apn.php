@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
-//echo 'vrh';
+echo 'vrh';
 if (isset($_GET["token"]) && isset($_GET["badge"]) ) {
     
 	$token = $_GET["token"];
