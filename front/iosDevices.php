@@ -16,7 +16,7 @@
                     type: 'GET',
                     data: data,
                     beforeSend: function() {
-                    	
+                    	window.alert("before ");
                     },
                     success: function(data, textStatus, xhr) {
                           $('.txt_message').val("");
