@@ -31,14 +31,14 @@ require_once 'ApnsPHP/Autoload.php';
 // Instanciate a new ApnsPHP_Push object
 $push = new ApnsPHP_Push(
 	ApnsPHP_Abstract::ENVIRONMENT_SANDBOX,
-	'server_certificates_bundle_sandbox.pem'
+	'../ApnsPHP/mcobiss.pem'
 );
 
 // Set the Provider Certificate passphrase
 // $push->setProviderCertificatePassphrase('test');
 
 // Set the Root Certificate Autority to verify the Apple remote peer
-$push->setRootCertificationAuthority('entrust_root_certification_authority.pem');
+$push->setRootCertificationAuthority('../ApnsPHP/entrust.pem');
 
 // Connect to the Apple Push Notification Service
 $push->connect();
