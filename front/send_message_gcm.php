@@ -9,6 +9,7 @@ if (isset($_GET["regId"]) && isset($_GET["message"]) &&
 	$acr = $_GET["acr"];
 	$memid = $_GET["memId"];
  
+	print $message;
 	
 	include_once '../lib/GCMsender.php';
  
