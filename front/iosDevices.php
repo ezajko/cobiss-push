@@ -115,10 +115,11 @@
                     ?>
                     <?php
                     while ($row = mysql_fetch_array($tokens)) {
+                    	$tid=$row["tid"];
                         $t=$row["token"];
                         $b=$apn->getUnreadCount($t); ?>
                         <li>
-                            <form id="<?php echo $t ?>" name="" method="post" onsubmit="return sendPushNotification('<?php echo $t ?>')">
+                            <form id="<?php echo $tid ?>" name="" method="post" onsubmit="return sendPushNotification('<?php echo $tid ?>')">
                             	<label>token: </label> 
                             		<span><?php	echo $t."<br/>";?></span>
                                 <div class="clear"></div>
