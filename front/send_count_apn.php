@@ -7,8 +7,8 @@ if (isset($_GET["token"]) && isset($_GET["badge"]) ) {
 	$badge = $_GET["badge"];
 	
 	print "badge: ".$badge." token: ".$token;
- //   include_once '../APN.php';
-	//include_once '../ApnsPHP/pushOne.php';
+    include_once '../APN.php';
+	include_once '../ApnsPHP/pushOne.php';
 	    
 	//echo pushOne($token, $badge);
 	
