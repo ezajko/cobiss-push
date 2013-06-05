@@ -23,8 +23,9 @@ class DbFunctionsGCM {
      * Storing new user
      * returns user details
      */
-    public function storeUser($acr, $memid, $dev_id) {
+    public function storeUser($acr_, $memid, $dev_id) {
     	$uid;
+    	$acr=strtoupper($acr_);
     	$result=mysql_query("SELECT uid FROM users WHERE acr='$acr' and memid='$memid'");
     	if (mysql_num_rows($result) == 0) {
     		$result = mysql_query("INSERT INTO users (acr, memid) VALUES('$acr','$memid')");
@@ -45,7 +46,8 @@ class DbFunctionsGCM {
     }
 	
 	
-	public function doesUserExist($acr, $memid, $dev_id) {
+	public function doesUserExist($acr_, $memid, $dev_id) {
+		$acr=strtoupper($acr_);
 		$uid;
     	$result=mysql_query("SELECT uid FROM users WHERE acr='$acr' and memid='$memid'");
     	if (mysql_num_rows($result) == 0) {
@@ -62,7 +64,8 @@ class DbFunctionsGCM {
     	else return TRUE;
 	}
 	
-	public function deleteUser($acr, $memid, $dev_id) {
+	public function deleteUser($acr_, $memid, $dev_id) {
+		$acr=strtoupper($acr_);
 		$uid;
     	$result=mysql_query("SELECT uid FROM users WHERE acr='$acr' and memid='$memid'");
     	if (mysql_num_rows($result) == 0) {
@@ -97,7 +100,8 @@ class DbFunctionsGCM {
     	 
     }
 	
-	public function getAllRegistrationIds($acr, $memid) {
+	public function getAllRegistrationIds($acr_, $memid) {
+		$acr=strtoupper($acr_);
 		$uid;
     	$result=mysql_query("SELECT uid FROM users WHERE acr='$acr' and memid='$memid'");
     	if (mysql_num_rows($result) == 0) {
@@ -115,7 +119,8 @@ class DbFunctionsGCM {
     	
 	}
 	
-	public function addMessage($title, $message, $acr, $memid) {
+	public function addMessage($title, $message, $acr_, $memid) {
+		$acr=strtoupper($acr_);
 		$uid;
 		$result=mysql_query("SELECT uid FROM users WHERE acr='$acr' and memid='$memid'");
 		if (mysql_num_rows($result) == 0)
@@ -173,7 +178,8 @@ class DbFunctionsGCM {
 		return $result;
 	}
 	
-	public function getAllMessages($acr, $memId) {
+	public function getAllMessages($acr_, $memId) {
+		$acr=strtoupper($acr_);
 		// get all members the device is registered to be notified about
 		$result=mysql_query("SELECT uid FROM users WHERE acr='$acr' and memid='$memId'");
 		if (mysql_num_rows($result) == 0)

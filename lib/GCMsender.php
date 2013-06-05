@@ -27,7 +27,7 @@ class GCMsender {
         );
 		//dump($fields);
 		//print_r $fields;
- 		print "\n".GOOGLE_API_KEY."\n";
+ 		//print "\n".GOOGLE_API_KEY."\n";
         $headers = array(
             'Authorization: key=' . GOOGLE_API_KEY,
             'Content-Type: application/json'
