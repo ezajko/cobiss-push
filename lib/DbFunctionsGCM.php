@@ -158,9 +158,9 @@ class DbFunctionsGCM {
 		return mysql_num_rows($result);
 	}
 	
-	public function getAllMessagesByToken($tokenAPN) {
+	public function getAllMessagesByToken($token) {
 		// get all members the device is registered to be notified about
-		$result=mysql_query("SELECT uid FROM $this->tokenTable WHERE token='$tokenAPN'");
+		$result=mysql_query("SELECT uid FROM $this->tokenTable WHERE token='$token'");
 		if (mysql_num_rows($result) == 0)
 			return 0;
 	

@@ -9,15 +9,16 @@ print '<messages>';
  if (isset($_REQUEST["devId"]) ) {
     $devId =  $_REQUEST["devId"];
     
-    require '../lib/DbFunctionsAPN.php';
+    print $devId;
+    require '../lib/DbFunctionsGCM.php';
     
 	$db = new DbFunctionsGCM();
     
-    $res = $db->getAllMessagesByToken($devId);
+    $res = $db->getAllMessagesByToken($devId);/*
 	if ($res != false)
 		$no_of_msgs = mysql_num_rows($res);
 	else
-		$no_of_msgs = 0;
+		$no_of_msgs = 0;*/
 	while ($row = mysql_fetch_array($res)) {
 		
 		print '<message>';

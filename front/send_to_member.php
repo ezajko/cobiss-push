@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
-if (isset($_GET["memid"]) && isset($_GET["message"]) && isset($_GET["title"])) {
-    $message = $_GET["message"];
+if (isset($_GET["memid"]) && isset($_GET["msg"]) && isset($_GET["title"])) {
+    $message = $_GET["msg"];
 	$title = $_GET["title"];
 	$memid = $_GET["memid"];
 	$acr = $_GET["acr"];
