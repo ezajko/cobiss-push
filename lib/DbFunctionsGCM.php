@@ -162,11 +162,11 @@ class DbFunctionsGCM {
 		// get all members the device is registered to be notified about
 		$result=mysql_query("SELECT uid FROM $this->tokenTable WHERE token='$token'");
 		if (mysql_num_rows($result) == 0)
-			return 0;
+			return "0";
 	
 		// build list of member ids
 		$uids=array();
-		while ($row = mysql_fetch_array($users)) {
+		while ($row = mysql_fetch_array($result)) {
 			$uids[]=$row["uid"];
 		}
 	
