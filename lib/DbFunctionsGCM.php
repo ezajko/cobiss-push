@@ -158,7 +158,7 @@ class DbFunctionsGCM {
 		return mysql_num_rows($result);
 	}
 	
-	public function getAllMessagesByToken($token) {
+	public function getAllMessagesByToken($token) {/*
 		// get all members the device is registered to be notified about
 		$result=mysql_query("SELECT uid FROM $this->tokenTable WHERE token='$token'");
 		if (mysql_num_rows($result) == 0)
@@ -170,11 +170,21 @@ class DbFunctionsGCM {
 			$uids[]=$row["uid"];
 		}
 	
+		
+		SELECT  
+		 select * from messages 
+inner join users on users.uid = messages.uid
+		
 		// count unread messages addressed to all members registered to device
 		foreach ($uids as &$uid) {
 			$result=mysql_query("SELECT * FROM messages WHERE uid='$uid'");
 		}
-	
+		*/
+		
+		$result=mysql_query("select * from messages
+			inner join users on users.uid = messages.uid
+			inner join gcm_tokens on users.uid = messages.uid
+			where $this->tokenTable.token ='$token'");
 		return $result;
 	}
 	
