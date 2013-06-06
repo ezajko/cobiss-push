@@ -148,7 +148,7 @@
                                     <textarea rows="3" name="message" cols="25" class="txt_message" placeholder="Type message here"></textarea>
 									<div class="cb"></div>
                                     <input type="hidden" name="acr" value="<?php echo $row["acr"] ?>"/>
-                                    <input type="hidden" name="memid" value="<?php echo $row["memId"] ?>"/>
+                                    <input type="hidden" name="memId" value="<?php echo $row["memid"] ?>"/>
                                     <input type="submit" class="send_btn" value="Send" onclick=""/>
                                 </div>
                             </form>
