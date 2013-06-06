@@ -13,7 +13,7 @@
                 $('form#'+id).unbind('submit');
                 $.ajax({
                     //url: "send_to_member.php",
-                    url: "../opacApi/sendMessagePar.php",
+                    url: "sendMessagePar.php",
                     type: 'GET',
                     data: data,
                     beforeSend: function() {
