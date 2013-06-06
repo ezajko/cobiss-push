@@ -27,7 +27,7 @@ print '<GCM>';
 		$gcm = new GCMsender();
 		$result = $gcm->send_notification($registatoin_ids, 
 			WELCOME_TITLE, WELCOME_TEXT, $acr, $memid);
-   
+   		print $result;
 	}
 	else 
 		echo 'NOT REGISTERED';
