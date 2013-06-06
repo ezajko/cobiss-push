@@ -183,8 +183,9 @@ inner join users on users.uid = messages.uid
 		
 		$result=mysql_query("select * from messages
 			inner join users on users.uid = messages.uid
-			inner join gcm_tokens on users.uid = messages.uid
-			where $this->tokenTable.token ='$token'");
+			inner join gcm_tokens on gcm_tokens.uid = messages.uid
+			where $this->tokenTable.token ='$token'
+			");//group by users.uid");
 		return $result;
 	}
 	

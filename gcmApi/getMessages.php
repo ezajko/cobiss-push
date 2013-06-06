@@ -9,7 +9,7 @@ print '<messages>';
  if (isset($_REQUEST["devId"]) ) {
     $devId =  $_REQUEST["devId"];
     
-    print $devId;
+    //print $devId;
     require '../lib/DbFunctionsGCM.php';
     
 	$db = new DbFunctionsGCM();
@@ -23,6 +23,8 @@ print '<messages>';
 		
 		print '<message>';
 		print '<id>'.$row["mid"].'</id>';
+		print '<base>'.$row["acr"].'</base>';
+		print '<member>'.$row["memid"].'</member>';
 		print '<title>'.$row["title"].'</title>';
 		print '<content>'.$row["message"].'</content>';
 		print '<msgread>'.$row["msgread"].'</msgread>';
