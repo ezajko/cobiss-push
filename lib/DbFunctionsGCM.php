@@ -185,7 +185,7 @@ inner join users on users.uid = messages.uid
 			inner join users on users.uid = messages.uid
 			inner join gcm_tokens on gcm_tokens.uid = messages.uid
 			where $this->tokenTable.token ='$token'
-			group by users.uid");
+			");//group by users.uid");
 		return $result;
 	}
 	
