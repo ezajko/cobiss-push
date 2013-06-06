@@ -21,6 +21,8 @@ print '<GCM>';
 	$res = $db->storeUser($acr, $memid, $token);
 	if ($db->doesUserExist($acr, $memid, $token)) {
 		echo 'OK';
+		
+		require_once '../lib/GCMsender.php';
 		$registatoin_ids = array($token);
 		$gcm = new GCMsender();
 		$result = $gcm->send_notification($registatoin_ids, 
