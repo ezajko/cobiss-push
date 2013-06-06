@@ -183,7 +183,7 @@ inner join users on users.uid = messages.uid
 		
 		$result=mysql_query("select * from messages
 			inner join users on users.uid = messages.uid
-			inner join gcm_tokens on users.uid = messages.uid
+			inner join gcm_tokens on users.uid = tokens.uid
 			where $this->tokenTable.token ='$token'");
 		return $result;
 	}
