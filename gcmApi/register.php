@@ -13,16 +13,22 @@ print '<GCM>';
     $token = $_REQUEST["regId"]; // GCM Registration ID
     // Store user details in db
     require_once '../lib/DbFunctionsGCM.php';
+    require_once '../gcmApi/definitions.php';
     
 	$db = new DbFunctionsGCM();
     
     //echo $res = $db->doesUserExist($acr, $memid, $gcm_regid);
 	$res = $db->storeUser($acr, $memid, $token);
-	if ($db->doesUserExist($acr, $memid, $token))
+	if ($db->doesUserExist($acr, $memid, $token)) {
 		echo 'OK';
+		$registatoin_ids = array($token);
+		$gcm = new GCMsender();
+		$result = $gcm->send_notification($registatoin_ids, 
+			WELCOME_TITLE, WELCOME_TEXT, $acr, $memid);
+   
+	}
 	else 
 		echo 'NOT REGISTERED';
-	//print $result;
 } else {
     print 'Bad request';
 }
