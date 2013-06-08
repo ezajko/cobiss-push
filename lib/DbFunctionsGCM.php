@@ -168,6 +168,16 @@ class DbFunctionsGCM {
 		return $result;
 	}
 	
+	public function getAllMessagesByMember($acr_, $memId) {
+		$acr=strtoupper($acr_);
+		
+		$result=mysql_query("select * from messages
+				inner join users on users.uid = messages.uid
+				where users.acr='$acr' and users.memid='$memId'
+				");//group by users.uid");
+		return $result;
+	}
+	
 	public function getAllMessages($acr_, $memId) {
 		$acr=strtoupper($acr_);
 		// get all members the device is registered to be notified about

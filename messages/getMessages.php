@@ -14,11 +14,8 @@ print '<messages>';
     
 	$db = new DbFunctionsAPN();
     
-    $res = $db->getAllMessages($acr,$memid);
-	if ($res != false)
-		$no_of_msgs = mysql_num_rows($res);
-	else
-		$no_of_msgs = 0;
+    $res = $db->getAllMessagesByMember($acr,$memid);
+	
 	while ($row = mysql_fetch_array($res)) {
 		
 		print '<message>';
