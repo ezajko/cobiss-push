@@ -10,7 +10,7 @@ print '<messages>';
     $devId =  $_REQUEST["devId"];
     
     //print $devId;
-    require '../lib/DbFunctionsGCM.php';
+    require '../lib/DbFunctionsAPN.php';
     
 	$db = new DbFunctionsAPN();
     
