@@ -12,7 +12,7 @@
                 var data = $('form#'+id).serialize();
                 $('form#'+id).unbind('submit');
                 $.ajax({
-                    url: "send_count_apn.php",
+                    url: "../front/send_count_apn.php",
                     type: 'GET',
                     data: data,
                     beforeSend: function() {
