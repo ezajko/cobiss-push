@@ -6,20 +6,25 @@
  */
 print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
 print '<messages>';
- if (isset($_REQUEST["acr"]) && isset($_REQUEST["memId"])) {
-    $acr =  $_REQUEST["acr"];
-    $memid =$_REQUEST["memId"];
+ if (isset($_REQUEST["devId"]) ) {
+    $devId =  $_REQUEST["devId"];
     
-    require '../lib/DbFunctionsAPN.php';
+    //print $devId;
+    require '../lib/DbFunctionsGCM.php';
     
 	$db = new DbFunctionsAPN();
     
-    $res = $db->getAllMessagesByMember($acr,$memid);
-	
+    $res = $db->getAllMessagesByToken($devId);/*
+	if ($res != false)
+		$no_of_msgs = mysql_num_rows($res);
+	else
+		$no_of_msgs = 0;*/
 	while ($row = mysql_fetch_array($res)) {
 		
 		print '<message>';
 		print '<id>'.$row["mid"].'</id>';
+		print '<base>'.$row["acr"].'</base>';
+		print '<member>'.$row["memid"].'</member>';
 		print '<title>'.$row["title"].'</title>';
 		print '<content>'.$row["message"].'</content>';
 		print '<msgread>'.$row["msgread"].'</msgread>';

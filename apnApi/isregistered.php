@@ -6,7 +6,7 @@
  */
 header('Content-Type: text/xml; charset=utf-8');
 print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
-print '<GCM>';
+print '<APN>';
 if (isset($_REQUEST["acr"]) && isset($_REQUEST["memId"]) && isset($_REQUEST["regId"])) {
     $acr = $_REQUEST["acr"];
     $memid = $_REQUEST["memId"];
@@ -24,5 +24,5 @@ if (isset($_REQUEST["acr"]) && isset($_REQUEST["memId"]) && isset($_REQUEST["reg
 } else {
     print 'Bad request';
 }
-print '</GCM>';
+print '</APN>';
 ?>
