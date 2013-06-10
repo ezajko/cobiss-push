@@ -22,7 +22,7 @@ class GCMsender {
             'registration_ids' => $registatoin_ids,
             'data' => array( 	"title" => $title,
 								"message" => $message,
-								"acr" => $acr,
+								"acr" => strtoupper($acr),
 								"memid" => $memid),
         );
 		//dump($fields);
