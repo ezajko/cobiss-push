@@ -52,7 +52,7 @@ $message->setCustomIdentifier("Message-Badge-3");
 
 
 // Set badge icon to "3"
-$message->setBadge($badge);
+$message->setBadge('$badge');
 
 // Set a simple welcome text
 $message->setText('Hello APNs-enabled device!');
