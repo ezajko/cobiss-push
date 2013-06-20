@@ -27,7 +27,7 @@ function pushOne($token,$badge) {
 	$push->connect();
 	
 	// Instantiate a new Message with a single recipient
-	$message = new ApnsPHP_Message($token);
+	$message = new ApnsPHP_Message('$token');
 	
 	print "message instantiated\n";
 	
