@@ -26,7 +26,7 @@ date_default_timezone_set('Europe/Rome');
 error_reporting(-1);
 
 // Using Autoload all classes are loaded on-demand
-require_once 'ApnsPHP/Autoload.php';
+require_once '../ApnsPHP/Autoload.php';
 
 // Instanciate a new ApnsPHP_Push object
 $push = new ApnsPHP_Push(
@@ -44,7 +44,7 @@ $push->setRootCertificationAuthority('../ApnsPHP/entrust.pem');
 $push->connect();
 
 // Instantiate a new Message with a single recipient
-$message = new ApnsPHP_Message('1e82db91c7ceddd72bf33d74ae052ac9c84a065b35148ac401388843106a7485');
+$message = new ApnsPHP_Message('124526cdb84970eac30592ee434657b7141895bf9b92ff8e1d2fbb2d14d56559');
 
 // Set a custom identifier. To get back this identifier use the getCustomIdentifier() method
 // over a ApnsPHP_Message object retrieved with the getErrors() message.
