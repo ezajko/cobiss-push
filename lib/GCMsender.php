@@ -9,7 +9,7 @@ class GCMsender {
     }
  
     public function send_notification($registatoin_ids, $title, $message, $acr, $memid) {
-    	send_notification_mid($registatoin_ids, $title, $message, $acr, $memid,-1);
+    	$this->send_notification_mid($registatoin_ids, $title, $message, $acr, $memid,-1);
     }
     /**
      * Sending Push Notification
