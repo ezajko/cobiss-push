@@ -51,7 +51,7 @@ $message = new ApnsPHP_Message($token);
 $message->setCustomIdentifier("Message-Badge-3");
 
 // Set badge icon to "3"
-$message->setBadge(3);
+$message->setBadge($badge);
 
 // Set a simple welcome text
 $message->setText('Hello APNs-enabled device!');
