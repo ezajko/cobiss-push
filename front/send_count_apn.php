@@ -15,6 +15,7 @@ if (isset($_GET["token"]) && isset($_GET["badge"]) ) {
 	//echo pushOne($token, $badge);
 	
 	
+	
 	//echo 'aafaf';
     
 }
