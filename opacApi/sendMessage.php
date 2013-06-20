@@ -9,7 +9,7 @@
 	
 	$com=new DbFunctionsCommon();
 	$members=$com->getAllUsers();
-	if ($users==0 || mysql_num_rows($users)==0) print 'no devices';
+	if ($members==0 || mysql_num_rows($members)==0) print 'no devices';
 	else {
 		//save message
 		$gcm = new DbFunctionsGCM();
