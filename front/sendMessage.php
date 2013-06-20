@@ -14,7 +14,7 @@
 		//save message
 		$gcm = new DbFunctionsGCM();
 		$mid=$gcm->addMessage($Title, $Message, $LibraryId, $MemberId);
-		
+		print 'messageId='.$mid.'\n';
 		print '<gcm>';
 		$users=$gcm->getAllRegistrationIds($LibraryId,$MemberId);
 		if ($users==0 || mysql_num_rows($users)==0) print 'no android devices';
