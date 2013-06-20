@@ -50,6 +50,7 @@ $message = new ApnsPHP_Message($token);
 // over a ApnsPHP_Message object retrieved with the getErrors() message.
 $message->setCustomIdentifier("Message-Badge-3");
 
+
 // Set badge icon to "3"
 $message->setBadge($badge);
 
