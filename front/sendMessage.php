@@ -26,7 +26,7 @@
 				$ids[]=$row["token"];
 				//print "t: ".$row["token"]."\n";
 			}
-			$result = $gcm->send_notification($ids, $Title, $Message, $LibraryId, $MemberId);
+			//$result = $gcm->send_notification($ids, $Title, $Message, $LibraryId, $MemberId);
 			print 'OK';
 		}
 		print '</gcm>';
