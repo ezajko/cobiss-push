@@ -44,7 +44,7 @@ $push->setRootCertificationAuthority('../ApnsPHP/entrust.pem');
 $push->connect();
 $token='124526cdb84970eac30592ee434657b7141895bf9b92ff8e1d2fbb2d14d56559';
 // Instantiate a new Message with a single recipient
-$message = new ApnsPHP_Message(token);
+$message = new ApnsPHP_Message($token);
 
 // Set a custom identifier. To get back this identifier use the getCustomIdentifier() method
 // over a ApnsPHP_Message object retrieved with the getErrors() message.
