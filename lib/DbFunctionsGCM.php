@@ -102,10 +102,11 @@ class DbFunctionsGCM {
 	
 	public function getAllRegistrationIds($acr_, $memid) {
 		$acr=strtoupper($acr_);
-		$uid;
-    	$result=mysql_query("SELECT uid FROM users WHERE acr='$acr' and memid='$memid'");
+		
+		$result=mysql_query("SELECT uid FROM users WHERE acr='$acr' and memid='$memid'");
     	if (mysql_num_rows($result) == 0) {
     		$uid=0;
+    		return 0;
     	}
     	else {
     		$row=mysql_fetch_array($result);
@@ -121,7 +122,6 @@ class DbFunctionsGCM {
 	
 	public function addMessage($title, $message, $acr_, $memid) {
 		$acr=strtoupper($acr_);
-		$uid;
 		$result=mysql_query("SELECT uid FROM users WHERE acr='$acr' and memid='$memid'");
 		if (mysql_num_rows($result) == 0)
 			return -1;
