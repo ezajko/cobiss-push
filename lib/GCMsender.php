@@ -8,10 +8,13 @@ class GCMsender {
  
     }
  
+    public function send_notification($registatoin_ids, $title, $message, $acr, $memid) {
+    	send_notification_mid($registatoin_ids, $title, $message, $acr, $memid,-1);
+    }
     /**
      * Sending Push Notification
      */
-    public function send_notification($registatoin_ids, $title, $message, $acr, $memid) {
+    public function send_notification_mid($registatoin_ids, $title, $message, $acr, $memid,$mid) {
         // include config
         include_once '../lib/config.php';
  
@@ -20,7 +23,8 @@ class GCMsender {
 		
         $fields = array(
             'registration_ids' => $registatoin_ids,
-            'data' => array( 	"title" => $title,
+            'data' => array( 	"mid" => $mid,
+            					"title" => $title,
 								"message" => $message,
 								"acr" => strtoupper($acr),
 								"memid" => $memid),

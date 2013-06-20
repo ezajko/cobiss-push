@@ -131,7 +131,7 @@ class DbFunctionsGCM {
 		//    var_dump(mysql_fetch_array($result));
 		$unread=0;
 		$result = mysql_query("INSERT INTO messages (uid, title, message, msgread, created_at) VALUES('$uid','$title','$message',0, NOW())");
-	
+			
 		return mysql_insert_id();
 	}
 	

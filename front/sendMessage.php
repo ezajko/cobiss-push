@@ -13,7 +13,7 @@
 	else {
 		//save message
 		$gcm = new DbFunctionsGCM();
-		$gcm->addMessage($Title, $Message, $LibraryId, $MemberId);
+		$mid=$gcm->addMessage($Title, $Message, $LibraryId, $MemberId);
 		
 		print '<gcm>';
 		$users=$gcm->getAllRegistrationIds($LibraryId,$MemberId);
@@ -26,7 +26,7 @@
 				$ids[]=$row["token"];
 				//print "t: ".$row["token"]."\n";
 			}
-			$result = $gcm->send_notification($ids, $Title, $Message, $LibraryId, $MemberId);
+			$result = $gcm->send_notification_mid($ids, $Title, $Message, $LibraryId, $MemberId,$mid);
 			print 'OK';
 		}
 		print '</gcm>';
