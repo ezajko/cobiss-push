@@ -29,6 +29,8 @@ function pushOne($token,$badge) {
 	// Instantiate a new Message with a single recipient
 	$message = new ApnsPHP_Message($token);
 	
+	print "message instantiated\n";
+	
 	// Set a custom identifier. To get back this identifier use the getCustomIdentifier() method
 	// over a ApnsPHP_Message object retrieved with the getErrors() message.
 	$message->setCustomIdentifier("Message-Badge-3");
