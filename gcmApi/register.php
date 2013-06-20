@@ -26,7 +26,7 @@ print '<GCM>';
 		$registatoin_ids = array($token);
 		$gcm = new GCMsender();
 		$result = $gcm->send_notification($registatoin_ids, 
-			WELCOME_TITLE, WELCOME_TEXT.$memid."(".$acr.")", $acr, $memid);
+			WELCOME_TITLE, "Naroèeni ste na obvestila za èlanstvo ".$memid."(".$acr.")", $acr, $memid);
    		print $result;
 	}
 	else 
