@@ -10,9 +10,9 @@ if (isset($_GET["token"]) && isset($_GET["badge"]) ) {
     /*
 	include_once '../APN.php';
 	*/
-	include_once '../ApnsPHP/pushOne.php';
+	include_once '../ApnsPHP/samplePush.php';
 	    
-	echo pushOne($token, $badge);
+	//echo pushOne($token, $badge);
 	
 	
 	//echo 'aafaf';
