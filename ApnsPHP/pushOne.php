@@ -1,6 +1,6 @@
 <?php
 
-function pushOne($token,$badge) {
+//function pushOne($token,$badge) {
 
 	// Adjust to your timezone
 	date_default_timezone_set('Europe/Rome');
@@ -65,4 +65,4 @@ function pushOne($token,$badge) {
 	if (!empty($aErrorQueue)) {
 		var_dump($aErrorQueue);
 	}
-}
+//}

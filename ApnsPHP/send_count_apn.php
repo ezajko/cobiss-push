@@ -12,7 +12,7 @@ if (isset($_GET["token"]) && isset($_GET["badge"]) ) {
 	*/
 	include_once 'pushOne.php';
 	    
-	echo pushOne($token, $badge);
+	//echo pushOne($token, $badge);
 	
 	
 	//echo 'aafaf';
