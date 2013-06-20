@@ -4,6 +4,7 @@
  * Registering a user device
  * Store reg id in users table
  */
+
 header('Content-Type: text/xml; charset=utf-8');
 print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
 print '<GCM>';
@@ -26,7 +27,7 @@ print '<GCM>';
 		$registatoin_ids = array($token);
 		$gcm = new GCMsender();
 		$result = $gcm->send_notification($registatoin_ids, 
-			WELCOME_TITLE, "Naroèeni ste na obvestila za èlanstvo ".$memid."(".$acr.")", $acr, $memid);
+			WELCOME_TITLE, "Naroï¿½eni ste na obvestila za ï¿½lanstvo ".$memid."(".$acr.")", $acr, $memid);
    		print $result;
 	}
 	else 
