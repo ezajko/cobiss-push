@@ -60,7 +60,7 @@ class GCMsender {
  
         // Close connection
         curl_close($ch);
-        echo $result;
+        return $result;
 		
     }
  
