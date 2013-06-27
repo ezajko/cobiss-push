@@ -10,7 +10,7 @@
 */
 
   header('Content-Type: text/xml');
-print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
+  print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
 
   $xml_post = file_get_contents('php://input');
   
@@ -21,7 +21,7 @@ print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
 	$MemberId = (string)$xml->MemberId[0];
 	$Title = 	(string)$xml->Title[0];
 	$Message = 	(string)$xml->Message[0];
-	
+	print "title ".$Title."\n\n";
 	require_once '../front/sendMessage.php';
 	
  }
