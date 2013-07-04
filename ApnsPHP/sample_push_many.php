@@ -42,28 +42,20 @@ $push->setRootCertificationAuthority('../ApnsPHP/entrust.pem');
 // Connect to the Apple Push Notification Service
 $push->connect();
 
-$message = new ApnsPHP_Message($ids[0]);
 
-// Set a custom identifier. To get back this identifier use the getCustomIdentifier() method
-// over a ApnsPHP_Message object retrieved with the getErrors() message.
-$message->setCustomIdentifier("Message-Badge-".$badge);
-$message->setBadge(1*$badges[0]);
-$message->setText('Sporočila');
-$message->setSound();
-$message->setCustomProperty('acme2', array('bang', 'whiz'));
-$message->setCustomProperty('acme3', array('bing', 'bong'));
-$message->setExpiry(30);
-$push->add($message);
-/*
+
+
 for ($i = 0; $i < sizeof($ids); $i++) {
 	$message = new ApnsPHP_Message($ids[i]);
 	$message->setBadge(1*$badges[i]);
+	$message->setText('Sporočila');
 	$message->setSound();
 	$message->setCustomProperty('acme2', array('bang', 'whiz'));
 	$message->setCustomProperty('acme3', array('bing', 'bong'));
+	$message->setExpiry(30);
 	$push->add($message);
 }
-		*/
+		
 
 // Send all messages in the message queue
 $push->send();
