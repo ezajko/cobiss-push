@@ -28,6 +28,8 @@ error_reporting(-1);
 // Using Autoload all classes are loaded on-demand
 require_once '../ApnsPHP/ApnsPHP/Autoload.php';
 
+print "\n\nPushManyStart";
+/*
 // Instanciate a new ApnsPHP_Push object
 $push = new ApnsPHP_Push(
 	ApnsPHP_Abstract::ENVIRONMENT_SANDBOX,
@@ -61,3 +63,5 @@ $aErrorQueue = $push->getErrors();
 if (!empty($aErrorQueue)) {
 	var_dump($aErrorQueue);
 }
+*/
+?>
