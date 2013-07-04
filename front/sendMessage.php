@@ -46,7 +46,7 @@
 				$badges[]=$b;
 				
 			}
-			include_once '../ApnsPHP/sample_push_many.php';
+			//include_once '../ApnsPHP/sample_push_many.php';
 			print "OK";
 		
 		}

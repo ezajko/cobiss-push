@@ -44,7 +44,7 @@ $push->connect();
 
 
 
-/*
+
 for ($i = 0; $i < count($ids); $i++) {
 	print '\n\nrow '.$ids[$i].' badge '.(1*$badges[$i]);
 	
@@ -58,7 +58,7 @@ for ($i = 0; $i < count($ids); $i++) {
 	$push->add($message);
 }
 		
-*/
+
 // Send all messages in the message queue
 $push->send();
 
