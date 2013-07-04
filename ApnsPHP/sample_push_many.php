@@ -45,9 +45,9 @@ $push->connect();
 
 
 
-for ($i = 0; $i < sizeof($ids); $i++) {
-	$message = new ApnsPHP_Message($ids[i]);
-	$message->setBadge(1*$badges[i]);
+for ($i = 0; $i < count($ids); $i++) {
+	$message = new ApnsPHP_Message($ids[$i]);
+	$message->setBadge(1*$badges[$i]);
 	$message->setText('Sporočila');
 	$message->setSound();
 	$message->setCustomProperty('acme2', array('bang', 'whiz'));
