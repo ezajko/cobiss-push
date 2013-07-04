@@ -23,7 +23,6 @@
                           window.alert("ok "+data);
                     },
                     error: function(xhr, textStatus, errorThrown) {
-                    	 window.alert("fail ");
                     }
                 });
                 return false;

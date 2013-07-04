@@ -2,7 +2,7 @@
 CREATE TABLE IF NOT EXISTS `users` (
   `uid` int(11) NOT NULL AUTO_INCREMENT,
   `acr` varchar(50) NOT NULL,
-  `memid` varchar(255) NOT NULL,
+  `memid` int(11) NOT NULL,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
