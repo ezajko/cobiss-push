@@ -37,16 +37,18 @@
 		$users=$apn->getAllRegistrationIds($LibraryId,$MemberId);
 		$no_of_users = mysql_num_rows($users);
 		if ($no_of_users==0) print 'no ios devices';
-		else {/*
+		else {
 			$ids=array();
 			$badges=array();
 			while ($row = mysql_fetch_array($users)) {
 				$ids[]=$row["token"];
-				$badges[]=$apn->getUnreadCount($row["token"]);
+				$b=$apn->getUnreadCount($row["token"]);
+				$badges[]=$b;
+				print 'row '.$row["token"].' badge '.$b;
 			}
-			include_once '../ApnsPHP/sample_push_many.php';
+			//include_once '../ApnsPHP/sample_push_many.php';
 			print "OK";
-		*/
+		
 		}
 		print '</apn>';
 		
