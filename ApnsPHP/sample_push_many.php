@@ -34,35 +34,24 @@ require_once 'ApnsPHP/Autoload.php';
 // Instanciate a new ApnsPHP_Push object
 $push = new ApnsPHP_Push(
 	ApnsPHP_Abstract::ENVIRONMENT_SANDBOX,
-	'server_certificates_bundle_sandbox.pem'
+	'../ApnsPHP/mcobiss.pem'
 );
 
 // Set the Root Certificate Autority to verify the Apple remote peer
-$push->setRootCertificationAuthority('entrust_root_certification_authority.pem');
-
-// Increase write interval to 100ms (default value is 10ms).
-// This is an example value, the 10ms default value is OK in most cases.
-// To speed up the sending operations, use Zero as parameter but
-// some messages may be lost.
-// $push->setWriteInterval(100 * 1000);
+$push->setRootCertificationAuthority('../ApnsPHP/entrust.pem');
 
 // Connect to the Apple Push Notification Service
 $push->connect();
 
-for ($i = 1; $i <= 10; $i++) {
-	// Instantiate a new Message with a single recipient
-	$message = new ApnsPHP_Message($i == 5 ? INVALID_TOKEN : VALID_TOKEN);
-
-	// Set a custom identifier. To get back this identifier use the getCustomIdentifier() method
-	// over a ApnsPHP_Message object retrieved with the getErrors() message.
-	$message->setCustomIdentifier(sprintf("Message-Badge-%03d", $i));
-
-	// Set badge icon to "3"
-	$message->setBadge($i);
-
-	// Add the message to the message queue
+for ($i = 0; $i < sizeof($ids); $i++) {
+	$message = new ApnsPHP_Message($ids[i]);
+	$message->setBadge(1*$badges[i]);
+	$message->setSound();
+	$message->setCustomProperty('acme2', array('bang', 'whiz'));
+	$message->setCustomProperty('acme3', array('bing', 'bong'));
 	$push->add($message);
 }
+		
 
 // Send all messages in the message queue
 $push->send();

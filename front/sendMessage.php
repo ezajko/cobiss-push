@@ -38,7 +38,13 @@
 		$no_of_users = mysql_num_rows($users);
 		if ($no_of_users==0) print 'no ios devices';
 		else {
-			//$apn->addMessage($Title, $Message, $LibraryId, $MemberId);
+			$ids=array();
+			$badges=array();
+			while ($row = mysql_fetch_array($users)) {
+				$ids[]=$row["token"];
+				$badges[]=$apn->getUnreadCount($row["token"]);
+			}
+			include_once '../ApnsPHP/sample_push_many.php';
 			print "OK";
 		}
 		print '</apn>';
