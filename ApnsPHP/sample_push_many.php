@@ -19,9 +19,6 @@
  * @version $Id$
  */
 
-define('VALID_TOKEN', '1e82db91c7ceddd72bf33d74ae052ac9c84a065b35148ac401388843106a7485');
-define('INVALID_TOKEN', 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff');
-
 // Adjust to your timezone
 date_default_timezone_set('Europe/Rome');
 
@@ -29,7 +26,7 @@ date_default_timezone_set('Europe/Rome');
 error_reporting(-1);
 
 // Using Autoload all classes are loaded on-demand
-require_once 'ApnsPHP/Autoload.php';
+require_once '../ApnsPHP/Autoload.php';
 
 // Instanciate a new ApnsPHP_Push object
 $push = new ApnsPHP_Push(
