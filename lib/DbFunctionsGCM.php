@@ -162,7 +162,7 @@ class DbFunctionsGCM {
 		
 		$result=mysql_query("select * from messages
 			inner join users on users.uid = messages.uid
-			inner join gcm_tokens on gcm_tokens.uid = messages.uid
+			inner join $this->tokenTable on $this->tokenTable.uid = messages.uid
 			where $this->tokenTable.token ='$token'
 			");//group by users.uid");
 		return $result;
