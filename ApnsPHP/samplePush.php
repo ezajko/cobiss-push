@@ -49,26 +49,12 @@ $message = new ApnsPHP_Message($token);
 // Set a custom identifier. To get back this identifier use the getCustomIdentifier() method
 // over a ApnsPHP_Message object retrieved with the getErrors() message.
 $message->setCustomIdentifier("Message-Badge-".$badge);
-
-// Set badge icon to "3"
 $message->setBadge(1*$badge);
-
-// Set a simple welcome text
-$message->setText('Hello APNs-enabled device!');
-
-// Play the default sound
+$message->setText('Sporočila');
 $message->setSound();
-
-// Set a custom property
 $message->setCustomProperty('acme2', array('bang', 'whiz'));
-
-// Set another custom property
 $message->setCustomProperty('acme3', array('bing', 'bong'));
-
-// Set the expiry value to 30 seconds
 $message->setExpiry(30);
-
-// Add the message to the message queue
 $push->add($message);
 
 // Send all messages in the message queue
