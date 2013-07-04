@@ -44,7 +44,7 @@
 				$ids[]=$row["token"];
 				$b=$apn->getUnreadCount($row["token"]);
 				$badges[]=$b;
-				print '\n\nrow '.$row["token"].' badge '.$b;
+				
 			}
 			include_once '../ApnsPHP/sample_push_many.php';
 			print "OK";

@@ -46,14 +46,16 @@ $push->connect();
 
 
 for ($i = 0; $i < count($ids); $i++) {
+	print '\n\nrow '.$ids[$i].' badge '.(1*$badges[$i]);
+	/*
 	$message = new ApnsPHP_Message($ids[$i]);
-	$message->setBadge(1*$badges[$i]);
+	$message->setBadge(1*($badges[$i]));
 	$message->setText('Sporočila');
 	$message->setSound();
 	$message->setCustomProperty('acme2', array('bang', 'whiz'));
 	$message->setCustomProperty('acme3', array('bing', 'bong'));
 	$message->setExpiry(30);
-	$push->add($message);
+	$push->add($message);*/
 }
 		
 
