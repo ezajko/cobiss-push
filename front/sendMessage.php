@@ -28,7 +28,7 @@
 			}
 			$result = $gcm->send_notification_mid($ids, $Title, $Message, $LibraryId, $MemberId,$mid);
 			$obj = json_decode($result);
-			var_dump($obj);
+			//var_dump($obj);
 			if ($obj->{'failure'}>0) {
 				print "\nError";
 				$ind=0;
