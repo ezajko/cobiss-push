@@ -18,8 +18,8 @@ if (isset($_GET["regId"]) && isset($_GET["message"]) &&
     $registatoin_ids = array($regId);
     
     $result = $gcm->send_notification($registatoin_ids, $title, $message, $acr, $memid);
-   
-	//echo 'aafaf';
+    
+	print "FAIL: ".$result->failure;
     print $result;
 }
 ?>
