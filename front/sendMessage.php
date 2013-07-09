@@ -14,7 +14,8 @@
 		//save message
 		$gcm = new DbFunctionsGCM();
 		$mid=$gcm->addMessage($Title, $Message, $LibraryId, $MemberId);
-		//print 'messageId='.$mid.'\n';
+		
+		// notify androids
 		print '<gcm>';
 		$users=$gcm->getAllRegistrationIds($LibraryId,$MemberId);
 		if ($users==0 || mysql_num_rows($users)==0) print 'no android devices';
@@ -27,17 +28,17 @@
 				//print "t: ".$row["token"]."\n";
 			}
 			$result = $gcmSender->send_notification_mid($ids, $Title, $Message, $LibraryId, $MemberId,$mid);
-			print $result;
+			//print $result;
 			
 			$obj = json_decode($result);
 			
+			// check response for errors and delete invalid tokens
 			if ($obj->{'failure'}>0) {
-				print "\n\tErrors were indeed";
+				print "\n\tError(s) on send";
 				$res=$obj->{'results'};
 				for($i=0; $i<count($res); $i++) {
-					print "\n\t".key($res[$i]);//->{'message_id'};//->{'error'};
-					if (key($res[$i])=="error") {
-						print "\n\tDelete: ".$ids[$i];
+					if (key($res[$i])=="error" && $res[$i]->{'error'}=="InvalidRegistration") {
+						print "\n\tDeleting token: ".$ids[$i];
 						$gcm->deleteToken($ids[$i]);
 					}
 				}
