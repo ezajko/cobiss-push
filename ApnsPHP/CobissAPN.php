@@ -40,8 +40,9 @@ class CobissAPN {
 	}
 	
 	public function notifyMany($ids, $badges) {
-		$push->connect();
-		print "\nConnected";
+		print "\nTry Connect";
+		$res=$push->connect();
+		print "\nConnected ".$res;
 		for ($i = 0; $i < count($ids); $i++) {
 			print '\n\nrow '.$ids[$i].' badge '.(1*$badges[$i]);
 		
