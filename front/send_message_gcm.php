@@ -20,6 +20,6 @@ if (isset($_GET["regId"]) && isset($_GET["message"]) &&
     $result = $gcm->send_notification($registatoin_ids, $title, $message, $acr, $memid);
    
 	//echo 'aafaf';
-    echo $result;
+    print $result;
 }
 ?>
