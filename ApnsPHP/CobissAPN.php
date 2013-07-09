@@ -1,10 +1,7 @@
 <?php
 class CobissAPN {
-	private $push;
 	
-	function __construct() {
-		
-		print "\ncobissApn constructor called";
+	public static function sendVelcomeMessage($token, $memid, $acr) {
 		date_default_timezone_set('Europe/Rome');
 		error_reporting(-1);
 		
@@ -14,13 +11,7 @@ class CobissAPN {
 				ApnsPHP_Abstract::ENVIRONMENT_SANDBOX,
 				'../ApnsPHP/mcobiss.pem');
 		$push->setRootCertificationAuthority('../ApnsPHP/entrust.pem');
-		print "\ncobissApn construction done";
 		
-	}
-	function __destruct() {
-	
-	}
-	public function sendVelcomeMessage($token, $memid, $acr) {
 		$push->connect();
 		
 		$message = new ApnsPHP_Message($token);
@@ -43,6 +34,17 @@ class CobissAPN {
 	}
 	
 	public function notifyMany($ids, $badges) {
+		
+		date_default_timezone_set('Europe/Rome');
+		error_reporting(-1);
+		
+		require_once '../ApnsPHP/ApnsPHP/Autoload.php';
+		
+		$push = new ApnsPHP_Push(
+				ApnsPHP_Abstract::ENVIRONMENT_SANDBOX,
+				'../ApnsPHP/mcobiss.pem');
+		$push->setRootCertificationAuthority('../ApnsPHP/entrust.pem');
+		
 		print "\nTry Connect";
 		$push->connect();
 		print "\nConnected ".$res;

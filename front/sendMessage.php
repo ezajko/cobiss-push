@@ -65,8 +65,8 @@
 			// 	include_once '../ApnsPHP/samplePush.php';
 			include_once '../ApnsPHP/CobissAPN.php';
 			
-			$capn=new CobissAPN();
-			$capn->notifyMany($ids, $badges);
+			//$capn=new CobissAPN();
+			CobissAPN::notifyMany($ids, $badges);
 			print "OK";
 		
 		}
