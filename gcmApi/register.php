@@ -8,7 +8,8 @@
 header('Content-Type: text/xml; charset=utf-8');
 print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
 print '<GCM>';
- if (isset($_REQUEST["acr"]) && isset($_REQUEST["memId"]) && isset($_REQUEST["regId"])) {
+ if (isset($_REQUEST["acr"]) &&  isset($_REQUEST["memId"]) &&  isset($_REQUEST["regId"]) &&
+    !empty($_REQUEST["acr"]) && !empty($_REQUEST["memId"]) && !empty($_REQUEST["regId"])) {
     $acr = $_REQUEST["acr"];
     $memid = $_REQUEST["memId"];
     $token = $_REQUEST["regId"]; // GCM Registration ID
