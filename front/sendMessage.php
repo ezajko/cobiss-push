@@ -27,7 +27,9 @@
 				//print "t: ".$row["token"]."\n";
 			}
 			$result = $gcm->send_notification_mid($ids, $Title, $Message, $LibraryId, $MemberId,$mid);
+			print $result;/*
 			$obj = json_decode($result);
+			
 			//var_dump($obj);
 			if ($obj->{'failure'}>0) {
 				print "\nError";
@@ -35,7 +37,7 @@
 				foreach ($obj['results'] AS $r) {
 					print "\n ".$r." ".$ind;
 				}
-			}
+			}*/
 			print 'OK';
 		}
 		print '</gcm>';
