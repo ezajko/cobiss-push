@@ -3,11 +3,12 @@ class CobissAPN {
 	private $push;
 	
 	function __construct() {
-		require_once '../ApnsPHP/ApnsPHP/Autoload.php';
 		
 		print "\ncobissApn constructor called";
 		date_default_timezone_set('Europe/Rome');
 		error_reporting(-1);
+		
+		require_once '../ApnsPHP/ApnsPHP/Autoload.php';
 		
 		$push = new ApnsPHP_Push(
 				ApnsPHP_Abstract::ENVIRONMENT_SANDBOX,
@@ -43,7 +44,7 @@ class CobissAPN {
 	
 	public function notifyMany($ids, $badges) {
 		print "\nTry Connect";
-		$res=$push->connect();
+		$push->connect();
 		print "\nConnected ".$res;
 		for ($i = 0; $i < count($ids); $i++) {
 			print '\n\nrow '.$ids[$i].' badge '.(1*$badges[$i]);
