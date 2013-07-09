@@ -41,7 +41,7 @@ class CobissAPN {
 	
 	public function notifyMany($ids, $badges) {
 		$push->connect();
-		
+		print "\nConnected";
 		for ($i = 0; $i < count($ids); $i++) {
 			print '\n\nrow '.$ids[$i].' badge '.(1*$badges[$i]);
 		
@@ -58,10 +58,10 @@ class CobissAPN {
 		
 		// Send all messages in the message queue
 		$push->send();
-		
+		print "\nSent";
 		// Disconnect from the Apple Push Notification Service
 		$push->disconnect();
-		
+		print "\nDisconnected";
 		$aErrorQueue = $push->getErrors();
 		if (!empty($aErrorQueue)) {
 			var_dump($aErrorQueue);
