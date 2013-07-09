@@ -27,6 +27,7 @@
 				//print "t: ".$row["token"]."\n";
 			}
 			$result = $gcm->send_notification_mid($ids, $Title, $Message, $LibraryId, $MemberId,$mid);
+			print $result;
 			print 'OK';
 		}
 		print '</gcm>';
