@@ -85,6 +85,12 @@ class DbFunctionsGCM {
     	}
     }
     
+    public function deleteToken($dev_id) {
+    	$result = mysql_query("DELETE FROM $this->tokenTable WHERE token='$dev_id'");
+    	return TRUE;
+    	
+    }
+    
     public function getAllRegistrationIdsByUID($uid) {
     	    	 
     	$result=mysql_query("SELECT token FROM $this->tokenTable WHERE uid='$uid'");

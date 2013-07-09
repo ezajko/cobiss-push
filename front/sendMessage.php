@@ -27,17 +27,18 @@
 				//print "t: ".$row["token"]."\n";
 			}
 			$result = $gcm->send_notification_mid($ids, $Title, $Message, $LibraryId, $MemberId,$mid);
-			print $result;/*
+			print $result;
+			
 			$obj = json_decode($result);
 			
-			//var_dump($obj);
 			if ($obj->{'failure'}>0) {
-				print "\nError";
-				$ind=0;
-				foreach ($obj['results'] AS $r) {
-					print "\n ".$r." ".$ind;
+				$res=$obj->{'results'};
+				for($i=0; $i<count($res); $i++) {
+					print "\n\t".key($res[$i]);//->{'message_id'};//->{'error'};
+					if (key($res[$i])=="error")
+						$gcm->deleteUser($ids[$i]);
 				}
-			}*/
+			}
 			print 'OK';
 		}
 		print '</gcm>';
