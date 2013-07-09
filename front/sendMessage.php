@@ -20,13 +20,13 @@
 		if ($users==0 || mysql_num_rows($users)==0) print 'no android devices';
 		else {
 			include_once '../lib/GCMsender.php';
-			$gcm = new GCMsender();
+			$gcmSender = new GCMsender();
 			$ids=array();
 			while ($row = mysql_fetch_array($users)) {
 				$ids[]=$row["token"];
 				//print "t: ".$row["token"]."\n";
 			}
-			$result = $gcm->send_notification_mid($ids, $Title, $Message, $LibraryId, $MemberId,$mid);
+			$result = $gcmSender->send_notification_mid($ids, $Title, $Message, $LibraryId, $MemberId,$mid);
 			print $result;
 			
 			$obj = json_decode($result);
