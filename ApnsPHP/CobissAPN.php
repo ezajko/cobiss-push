@@ -4,6 +4,8 @@ class CobissAPN {
 	
 	function __construct() {
 		require_once '../ApnsPHP/ApnsPHP/Autoload.php';
+		
+		print "\ncobissApn constructor called";
 		date_default_timezone_set('Europe/Rome');
 		error_reporting(-1);
 		
@@ -11,6 +13,8 @@ class CobissAPN {
 				ApnsPHP_Abstract::ENVIRONMENT_SANDBOX,
 				'../ApnsPHP/mcobiss.pem');
 		$push->setRootCertificationAuthority('../ApnsPHP/entrust.pem');
+		print "\ncobissApn construction done";
+		
 	}
 	
 	public function sendVelcomeMessage($token, $memid, $acr) {
