@@ -33,7 +33,7 @@ class CobissAPN {
 		}
 	}
 	
-	public function notifyMany($ids, $badges) {
+	public static function notifyMany($ids, $badges) {
 		
 		date_default_timezone_set('Europe/Rome');
 		error_reporting(-1);
