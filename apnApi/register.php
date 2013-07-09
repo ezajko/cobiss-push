@@ -16,13 +16,15 @@ print '<APN>';
     
 	$db = new DbFunctionsAPN();
     
-    //echo $res = $db->doesUserExist($acr, $memid, $gcm_regid);
+	if ($db->doesUserExist($acr, $memid, $token)) {
+		echo 'already registered'; // already registered
+    } else {
 	$res = $db->storeUser($acr, $memid, $token);
 	if ($db->doesUserExist($acr, $memid, $token))
 		echo 'OK';
 	else 
 		echo 'NOT REGISTERED';
-	//print $result;
+	}
 } else {
     print 'Bad request';
 }

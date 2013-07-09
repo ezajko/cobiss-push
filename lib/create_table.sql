@@ -21,17 +21,17 @@ CREATE TABLE IF NOT EXISTS `messages` (
 
 CREATE TABLE IF NOT EXISTS `gcm_tokens` (
 	`tid` int(11) NOT NULL AUTO_INCREMENT,
-	`uid` int(11),
+	`uid` int(11) NOT NULL,
 	`token` text,
-	PRIMARY KEY (`gcmid`),
+	PRIMARY KEY (`tid`),
 	FOREIGN KEY (`uid`) REFERENCES users(uid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 CREATE TABLE IF NOT EXISTS `apn_tokens` (
 	`tid` int(11) NOT NULL AUTO_INCREMENT,
-	`uid` int(11),
+	`uid` int(11) NOT NULL,
 	`token` text,
-	PRIMARY KEY (`apnid`),
+	PRIMARY KEY (`tid`),
 	FOREIGN KEY (`uid`) REFERENCES users(uid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

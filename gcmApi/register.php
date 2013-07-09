@@ -18,20 +18,23 @@ print '<GCM>';
     
 	$db = new DbFunctionsGCM();
     
-    //echo $res = $db->doesUserExist($acr, $memid, $gcm_regid);
-	$res = $db->storeUser($acr, $memid, $token);
-	if ($db->doesUserExist($acr, $memid, $token)) {
-		echo 'OK';
-		
-		require_once '../lib/GCMsender.php';
-		$registatoin_ids = array($token);
-		$gcm = new GCMsender();
-		$result = $gcm->send_notification($registatoin_ids, 
-			WELCOME_TITLE, WELCOME_TEXT.$memid."@".$acr, $acr, $memid);
-   		print $result;
-	}
-	else 
-		echo 'NOT REGISTERED';
+    if ($db->doesUserExist($acr, $memid, $token)) {
+		echo 'already registered'; // already registered
+    } else {
+		$res = $db->storeUser($acr, $memid, $token);
+		if ($db->doesUserExist($acr, $memid, $token)) {
+			echo 'OK';
+			
+			require_once '../lib/GCMsender.php';
+			$registatoin_ids = array($token);
+			$gcm = new GCMsender();
+			$result = $gcm->send_notification($registatoin_ids, 
+				WELCOME_TITLE, WELCOME_TEXT.$memid."@".$acr, $acr, $memid);
+	   		print $result;
+		}
+		else 
+			echo 'NOT REGISTERED';
+    }
 } else {
     print 'Bad request';
 }
