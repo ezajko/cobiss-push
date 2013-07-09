@@ -16,7 +16,9 @@ class CobissAPN {
 		print "\ncobissApn construction done";
 		
 	}
+	function __destruct() {
 	
+	}
 	public function sendVelcomeMessage($token, $memid, $acr) {
 		$push->connect();
 		
