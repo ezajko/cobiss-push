@@ -36,6 +36,7 @@
 				for($i=0; $i<count($res); $i++) {
 					print "\n\t".key($res[$i]);//->{'message_id'};//->{'error'};
 					if (key($res[$i])=="error")
+						print "\n\tDelete: ".$ids[$i];
 						$gcm->deleteUser($ids[$i]);
 				}
 			}
