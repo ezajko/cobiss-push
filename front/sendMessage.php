@@ -66,7 +66,10 @@
 			include_once '../ApnsPHP/CobissAPN.php';
 			
 			//$capn=new CobissAPN();
-			CobissAPN::notifyMany($ids, $badges);
+			$failedIds=CobissAPN::notifyMany($ids, $badges);
+			for ($i = 0; $i < count($failedIds); $i++) {
+				$apn->deleteToken($failedIds[$i]);
+			}
 			print "OK";
 		
 		}

@@ -45,11 +45,13 @@ class CobissAPN {
 				'../ApnsPHP/mcobiss.pem');
 		$push->setRootCertificationAuthority('../ApnsPHP/entrust.pem');
 		
-		print "\nTry Connect";
+		print "\nTry to connect\n";
 		$push->connect();
 		print "\nConnected ".$res;
+		
+		$failedIds=array();
 		for ($i = 0; $i < count($ids); $i++) {
-			print '\n\nrow '.$ids[$i].' badge '.(1*$badges[$i]);
+			print "\n\nrow ".$ids[$i]." badge ".(1*$badges[$i]);
 			try {
 				$message = new ApnsPHP_Message($ids[$i]);
 				$message->setBadge(1*($badges[$i]));
@@ -61,6 +63,7 @@ class CobissAPN {
 				$push->add($message);
 			} catch (Exception $e) {
 				print "\nCreating message failed";
+				$failedIds[]=$ids[$i];
 			}
 			
 		}
@@ -76,6 +79,7 @@ class CobissAPN {
 		if (!empty($aErrorQueue)) {
 			var_dump($aErrorQueue);
 		}
+		return $failedIds;
 	}
 }
 ?>
