@@ -32,6 +32,7 @@
 			$obj = json_decode($result);
 			
 			if ($obj->{'failure'}>0) {
+				print "\n\tErrors were indeed";
 				$res=$obj->{'results'};
 				for($i=0; $i<count($res); $i++) {
 					print "\n\t".key($res[$i]);//->{'message_id'};//->{'error'};
