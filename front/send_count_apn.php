@@ -10,12 +10,12 @@ if (isset($_GET["token"]) && isset($_GET["badge"]) ) {
     /*
 	include_once '../APN.php';
 	*/
-	include_once '../ApnsPHP/samplePush.php';
-	    
+// 	include_once '../ApnsPHP/samplePush.php';
+	include_once '../ApnsPHP/CobissAPN.php';
+	
+	$capn=new CobissAPN();
+	print $capn->notifyMany($token, $badges);
 	//echo pushOne($token, $badge);
-	
-	
-	
 	//echo 'aafaf';
     
 }

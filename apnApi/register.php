@@ -21,8 +21,12 @@ print '<APN>';
 		echo 'already registered'; // already registered
     } else {
 	$res = $db->storeUser($acr, $memid, $token);
-	if ($db->doesUserExist($acr, $memid, $token))
+	if ($db->doesUserExist($acr, $memid, $token)) {
 		echo 'OK';
+		include_once '../ApnsPHP/CobissAPN.php';
+		$capn=new CobissAPN();
+		$capn->sendVelcomeMessage($token, $memid, $acr);
+	}
 	else 
 		echo 'NOT REGISTERED';
 	}

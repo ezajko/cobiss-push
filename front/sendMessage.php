@@ -62,7 +62,11 @@
 				$badges[]=$b;
 				
 			}
-			include_once '../ApnsPHP/sample_push_many.php';
+			// 	include_once '../ApnsPHP/samplePush.php';
+			include_once '../ApnsPHP/CobissAPN.php';
+			
+			$capn=new CobissAPN();
+			$capn->notifyMany($ids, $badges);
 			print "OK";
 		
 		}
