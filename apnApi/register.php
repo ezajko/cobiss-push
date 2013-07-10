@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /**
  * Registering a user device
@@ -6,7 +6,7 @@
  */
 header('Content-Type: text/xml; charset=utf-8');
 print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
-print '<APN>';
+
  if (isset($_REQUEST["acr"]) &&  isset($_REQUEST["memId"]) &&  isset($_REQUEST["regId"]) &&
     !empty($_REQUEST["acr"]) && !empty($_REQUEST["memId"]) && !empty($_REQUEST["regId"])) {
    $acr = $_REQUEST["acr"];
@@ -18,21 +18,28 @@ print '<APN>';
 	$db = new DbFunctionsAPN();
     
 	if ($db->doesUserExist($acr, $memid, $token)) {
-		echo 'already registered'; // already registered
+		echo '<APN>OK</APN>'; // already registered
     } else {
-	$res = $db->storeUser($acr, $memid, $token);
-	if ($db->doesUserExist($acr, $memid, $token)) {
-		echo 'OK';
-		include_once '../ApnsPHP/CobissAPN.php';
-		$capn=new CobissAPN();
-		$capn->sendVelcomeMessage($token, $memid, $acr);
-	}
-	else 
-		echo 'NOT REGISTERED';
+		$res = $db->storeUser($acr, $memid, $token);
+		if ($db->doesUserExist($acr, $memid, $token)) {
+			print '<APN>';
+			echo 'OK';
+			print '</APN>';
+			print '<log>';
+			include_once '../ApnsPHP/CobissAPN.php';
+			$capn=new CobissAPN();
+			$capn->sendVelcomeMessage($token, $memid, $acr);
+			print '</log>';
+		}
+		else {
+			print '<APN>';
+			print 'NOT REGISTERED';
+			print '</APN>';
+		}
 	}
 } else {
     print 'Bad request';
 }
-print '</APN>';
+
 
 ?>

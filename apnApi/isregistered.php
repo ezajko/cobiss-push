@@ -1,4 +1,4 @@
-﻿<?php
+<?php
  
 /**
  * Registering a user device
