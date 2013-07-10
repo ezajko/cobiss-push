@@ -17,7 +17,7 @@ class CobissAPN {
 		$message = new ApnsPHP_Message($token);
 		$message->setCustomIdentifier("Message-Badge-".$badge);
 		$message->setText(
-				'Naroèeni ste na obvestila za '.$memid.'@'.$acr.'.');
+				'Naroceni ste na obvestila za ');//.$memid.'@'.$acr.'.');
 		$message->setSound();
 		$message->setCustomProperty('acme2', array('bang', 'whiz'));
 		$message->setCustomProperty('acme3', array('bing', 'bong'));
@@ -56,7 +56,7 @@ class CobissAPN {
 				$message = new ApnsPHP_Message($ids[$i]);
 				$message->setCustomIdentifier("Message-Badge-".$badge);
 				$message->setBadge(1*($badges[$i]));
-				$message->setText('Imate sporoèila.');
+				$message->setText('Imate sporocila.');
 				$message->setSound();
 				$message->setCustomProperty('acme2', array('bang', 'whiz'));
 				$message->setCustomProperty('acme3', array('bing', 'bong'));
