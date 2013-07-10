@@ -13,17 +13,19 @@ class CobissAPN {
 		$push->setRootCertificationAuthority('../ApnsPHP/entrust.pem');
 		
 		$push->connect();
-		
-		$message = new ApnsPHP_Message($token);
-		$message->setCustomIdentifier("Message-Badge-".$badge);
-		$message->setText(
-				'Naroceni ste na obvestila za ');//.$memid.'@'.$acr.'.');
-		$message->setSound();
-		$message->setCustomProperty('acme2', array('bang', 'whiz'));
-		$message->setCustomProperty('acme3', array('bing', 'bong'));
-		$message->setExpiry(30);
-		$push->add($message);
-		
+		try {
+			$message = new ApnsPHP_Message($token);
+			$message->setCustomIdentifier("Message-Badge-".$badge);
+			$message->setText(
+					'Naroceni ste na obvestila za ');//.$memid.'@'.$acr.'.');
+			$message->setSound();
+			$message->setCustomProperty('acme2', array('bang', 'whiz'));
+			$message->setCustomProperty('acme3', array('bing', 'bong'));
+			$message->setExpiry(30);
+			$push->add($message);
+		} catch (Exception $e) {
+			print "\nCreating message failed - probably due to a bad token";
+		}
 		$push->send();
 		$push->disconnect();
 		
@@ -57,7 +59,8 @@ class CobissAPN {
 				$message->setCustomIdentifier("Message-Badge-".$badge);
 				$message->setBadge(1*($badges[$i]));
 				$message->setText('Imate sporocila.');
-				$message->setSound();
+				//$message->se
+				//$message->setSound();
 				$message->setCustomProperty('acme2', array('bang', 'whiz'));
 				$message->setCustomProperty('acme3', array('bing', 'bong'));
 				$message->setExpiry(30);
