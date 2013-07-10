@@ -2,6 +2,7 @@
 class CobissAPN {
 	
 	public static function sendVelcomeMessage($token, $memid, $acr) {
+		$result=1;
 		date_default_timezone_set('Europe/Rome');
 		error_reporting(-1);
 		
@@ -17,7 +18,7 @@ class CobissAPN {
 			$message = new ApnsPHP_Message($token);
 			$message->setCustomIdentifier("Message-Badge-".$badge);
 			$message->setText(
-					'Naroceni ste na obvestila za ');//.$memid.'@'.$acr.'.');
+					'Naroèeni ste na obvestila za ');//.$memid.'@'.$acr.'.');
 			$message->setSound();
 			$message->setCustomProperty('acme2', array('bang', 'whiz'));
 			$message->setCustomProperty('acme3', array('bing', 'bong'));
@@ -27,11 +28,13 @@ class CobissAPN {
 			
 		} catch (Exception $e) {
 			print "\nCreating message failed - probably due to a bad token";
+			$result=-1;
 		}
 		
 		try {
 			$push->disconnect();
 		} catch (Exception $e) {
+			$result=-1;
 		}
 		
 		$aErrorQueue = $push->getErrors();
@@ -63,7 +66,7 @@ class CobissAPN {
 				$message = new ApnsPHP_Message($ids[$i]);
 				$message->setCustomIdentifier("Message-Badge-".$badge);
 				$message->setBadge(1*($badges[$i]));
-				$message->setText('Imate sporocila.');
+				$message->setText('Imate sporoèila.');
 				//$message->se
 				//$message->setSound();
 				$message->setCustomProperty('acme2', array('bang', 'whiz'));

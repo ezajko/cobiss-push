@@ -35,13 +35,13 @@ print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
 				print '</APN>';
 			} else {
 				print "\n<APN>";
-				echo 'error';
+				echo 'FAILED';
 				print '</APN>';
 			}
 		}
 		else {
 			print "\n<APN>";
-			print 'error';
+			print 'FAILED';
 			print '</APN>';
 		}
 	}
