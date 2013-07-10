@@ -17,7 +17,7 @@ class CobissAPN {
 		try {
 			$message = new ApnsPHP_Message($token);
 			$message->setCustomIdentifier("Message-Badge-".$badge);
-			$message->setText('Naroceni ste');//.$memid.'@'.$acr.'.');
+			$message->setText('Naročeni ste');//.$memid.'@'.$acr.'.');
 			$message->setSound();
 			$message->setCustomProperty('acme2', array('bang', 'whiz'));
 			$message->setCustomProperty('acme3', array('bing', 'bong'));
@@ -45,7 +45,7 @@ class CobissAPN {
 	
 	public static function notifyMany($ids, $badges) {
 		
-		date_default_timezone_set('Europe/Rome');
+		//date_default_timezone_set('Europe/Rome');
 		
 		error_reporting(-1);
 		
@@ -62,12 +62,12 @@ class CobissAPN {
 		
 		$failedIds=array();
 		for ($i = 0; $i < count($ids); $i++) {
-			print "\n\nrow ".$ids[$i]." badge ".(1*$badges[$i]);
+			print "\n\n".$i.": ".substr($ids[$i], 0,10)."... badge ".(1*$badges[$i]);
 			try {
 				$message = new ApnsPHP_Message($ids[$i]);
 				$message->setCustomIdentifier("Message-Badge-".$badge);
 				$message->setBadge(1*($badges[$i]));
-				$message->setText('Imate neprebrana sporo�ila.');
+				$message->setText('Imate neprebrana sporočila.');
 				print $message->getText();
 				$message->setSound();
 				$message->setCustomProperty('acme2', array('bang', 'whiz'));
