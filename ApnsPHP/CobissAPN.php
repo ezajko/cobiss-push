@@ -46,6 +46,7 @@ class CobissAPN {
 	public static function notifyMany($ids, $badges) {
 		
 		date_default_timezone_set('Europe/Rome');
+		
 		error_reporting(-1);
 		
 		require_once '../ApnsPHP/ApnsPHP/Autoload.php';
@@ -66,12 +67,13 @@ class CobissAPN {
 				$message = new ApnsPHP_Message($ids[$i]);
 				$message->setCustomIdentifier("Message-Badge-".$badge);
 				$message->setBadge(1*($badges[$i]));
-				$message->setText('Imate neprebrana sporoèila.');
+				$message->setText('Imate neprebrana sporocila.');
+				print $message->getText();
 				$message->setSound();
 				$message->setCustomProperty('acme2', array('bang', 'whiz'));
 				$message->setCustomProperty('acme3', array('bing', 'bong'));
 				$message->setExpiry(30);
-				$push->add($message);
+				//$push->add($message);
 			} catch (Exception $e) {
 				print "\nCreating message failed";
 				print "\n\n".$e->getMessage()."\n";
