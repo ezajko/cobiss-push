@@ -6,7 +6,7 @@ if (isset($_GET["token"]) && isset($_GET["badge"]) ) {
 	$token = $_GET["token"];
 	$badge = $_GET["badge"];
 	
-	print "badge: ".$badge." token: ".$token;
+	print "\nbadge: ".$badge."\ntoken: ".$token;
     /*
 	include_once '../APN.php';
 	*/
@@ -14,6 +14,8 @@ if (isset($_GET["token"]) && isset($_GET["badge"]) ) {
 	include_once '../ApnsPHP/CobissAPN.php';
 	
 	$capn=new CobissAPN();
+	$tokens=array();
+	$tokens[]=$token;
 	print $capn->notifyMany($token, $badges);
 	//echo pushOne($token, $badge);
 	//echo 'aafaf';
