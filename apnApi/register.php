@@ -22,18 +22,26 @@ print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
     } else {
 		$res = $db->storeUser($acr, $memid, $token);
 		if ($db->doesUserExist($acr, $memid, $token)) {
-			print "\n<APN>";
-			echo 'OK';
-			print '</APN>';
+			
 			print "\n<log>";
 			include_once '../ApnsPHP/CobissAPN.php';
 			$capn=new CobissAPN();
-			$capn->sendVelcomeMessage($token, $memid, $acr);
+			$status=$capn->sendVelcomeMessage($token, $memid, $acr);
 			print '</log>';
+			
+			if ($status>-1) {
+				print "\n<APN>";
+				echo 'OK';
+				print '</APN>';
+			} else {
+				print "\n<APN>";
+				echo 'error';
+				print '</APN>';
+			}
 		}
 		else {
 			print "\n<APN>";
-			print 'NOT REGISTERED';
+			print 'error';
 			print '</APN>';
 		}
 	}
