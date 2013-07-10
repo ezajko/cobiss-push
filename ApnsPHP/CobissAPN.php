@@ -27,6 +27,7 @@ class CobissAPN {
 			
 		} catch (Exception $e) {
 			print "\nCreating message failed - probably due to a bad token";
+			print "\n\n".$e->getMessage()."\n";
 			$result=-1;
 		}
 		
