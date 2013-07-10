@@ -66,7 +66,7 @@ class CobissAPN {
 				$message = new ApnsPHP_Message($ids[$i]);
 				$message->setCustomIdentifier("Message-Badge-".$badge);
 				$message->setBadge(1*($badges[$i]));
-				$message->setText('Imate neprebrana sporocila.');
+				$message->setText('Imate neprebrana sporoèila.');
 				$message->setSound();
 				$message->setCustomProperty('acme2', array('bang', 'whiz'));
 				$message->setCustomProperty('acme3', array('bing', 'bong'));
