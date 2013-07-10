@@ -66,7 +66,6 @@ class CobissAPN {
 				$message->setCustomIdentifier("Message-Badge-".$badge);
 				$message->setBadge(1*($badges[$i]));
 				$message->setText('Imate neprebrana sporocila.');
-				//$message->se
 				$message->setSound();
 				$message->setCustomProperty('acme2', array('bang', 'whiz'));
 				$message->setCustomProperty('acme3', array('bing', 'bong'));
@@ -74,6 +73,7 @@ class CobissAPN {
 				$push->add($message);
 			} catch (Exception $e) {
 				print "\nCreating message failed";
+				print "\n\n".$e->getMessage()."\n";
 				$failedIds[]=$ids[$i];
 			}
 			
