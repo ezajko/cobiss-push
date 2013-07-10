@@ -23,10 +23,11 @@ class CobissAPN {
 			$message->setCustomProperty('acme3', array('bing', 'bong'));
 			$message->setExpiry(30);
 			$push->add($message);
+			$push->send();
 		} catch (Exception $e) {
 			print "\nCreating message failed - probably due to a bad token";
 		}
-		$push->send();
+		
 		$push->disconnect();
 		
 		$aErrorQueue = $push->getErrors();

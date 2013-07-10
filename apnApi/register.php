@@ -18,27 +18,27 @@ print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
 	$db = new DbFunctionsAPN();
     
 	if ($db->doesUserExist($acr, $memid, $token)) {
-		echo '<APN>OK</APN>'; // already registered
+		echo "\n<APN>OK</APN>"; // already registered
     } else {
 		$res = $db->storeUser($acr, $memid, $token);
 		if ($db->doesUserExist($acr, $memid, $token)) {
-			print '<APN>';
+			print "\n<APN>";
 			echo 'OK';
 			print '</APN>';
-			print '<log>';
+			print "\n<log>";
 			include_once '../ApnsPHP/CobissAPN.php';
 			$capn=new CobissAPN();
 			$capn->sendVelcomeMessage($token, $memid, $acr);
 			print '</log>';
 		}
 		else {
-			print '<APN>';
+			print "\n<APN>";
 			print 'NOT REGISTERED';
 			print '</APN>';
 		}
 	}
 } else {
-    print '<APN>Bad request</APN>';
+    print "\n<APN>Bad request</APN>";
 }
 
 
