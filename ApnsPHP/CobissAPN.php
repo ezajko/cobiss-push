@@ -24,11 +24,15 @@ class CobissAPN {
 			$message->setExpiry(30);
 			$push->add($message);
 			$push->send();
+			
 		} catch (Exception $e) {
 			print "\nCreating message failed - probably due to a bad token";
 		}
 		
-		$push->disconnect();
+		try {
+			$push->disconnect();
+		} catch (Exception $e) {
+		}
 		
 		$aErrorQueue = $push->getErrors();
 		if (!empty($aErrorQueue)) {
