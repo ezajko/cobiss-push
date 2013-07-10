@@ -5,7 +5,6 @@ class GCMsender {
     //put your code here
     // constructor
     function __construct() {
- 
     }
  
     public function send_notification($registatoin_ids, $title, $message, $acr, $memid) {
