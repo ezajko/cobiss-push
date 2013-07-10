@@ -17,7 +17,7 @@ class CobissAPN {
 		try {
 			$message = new ApnsPHP_Message($token);
 			$message->setCustomIdentifier("Message-Badge-".$badge);
-			$message->setText('Naroceni ste na obvestila.');//.$memid.'@'.$acr.'.');
+			$message->setText('Naroceni ste');//.$memid.'@'.$acr.'.');
 			$message->setSound();
 			$message->setCustomProperty('acme2', array('bang', 'whiz'));
 			$message->setCustomProperty('acme3', array('bing', 'bong'));
