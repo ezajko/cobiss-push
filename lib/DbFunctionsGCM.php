@@ -5,8 +5,9 @@ class DbFunctionsGCM {
     protected $db;
 	
 	protected $tokenTable;
-    //put your code here
-    // constructor
+    
+	/** Class constuctor
+	 * connects to database */
     function __construct() {
         require_once '../lib/DbConnect.php';
         $this->db = new DbConnect();
@@ -19,10 +20,7 @@ class DbFunctionsGCM {
  
     }
 	
-	/**
-     * Storing new user
-     * returns user details
-     */
+	/** Storing new user  */
     public function storeUser($acr_, $memid, $dev_id) {
     	$uid;
     	$acr=strtoupper($acr_);
@@ -45,7 +43,7 @@ class DbFunctionsGCM {
     	
     }
 	
-	
+    /** Check if the device is subscribed <p>Returns TRUE or FALSE</p>  */
 	public function doesUserExist($acr_, $memid, $dev_id) {
 		$acr=strtoupper($acr_);
 		$uid;
@@ -64,6 +62,7 @@ class DbFunctionsGCM {
     	else return TRUE;
 	}
 	
+	/** Delets the subscription  */
 	public function deleteUser($acr_, $memid, $dev_id) {
 		$acr=strtoupper($acr_);
 		$uid;
@@ -85,12 +84,14 @@ class DbFunctionsGCM {
     	}
     }
     
+    /** Delets all subscriptions (app uninstalled)  */
     public function deleteToken($dev_id) {
     	$result = mysql_query("DELETE FROM $this->tokenTable WHERE token='$dev_id'");
     	return TRUE;
     	
     }
     
+    /** Gets a list of registration IDs of a specified member  */
     public function getAllRegistrationIdsByUID($uid) {
     	    	 
     	$result=mysql_query("SELECT token FROM $this->tokenTable WHERE uid='$uid'");
@@ -106,6 +107,7 @@ class DbFunctionsGCM {
     	 
     }
 	
+    /** Gets a list of registration IDs of a specified member  */
 	public function getAllRegistrationIds($acr_, $memid) {
 		$acr=strtoupper($acr_);
 		
@@ -126,6 +128,7 @@ class DbFunctionsGCM {
     	
 	}
 	
+	/** Stores a message  */
 	public function addMessage($title, $message, $acr_, $memid) {
 		$acr=strtoupper($acr_);
 		$result=mysql_query("SELECT uid FROM users WHERE acr='$acr' and memid='$memid'");
@@ -142,7 +145,7 @@ class DbFunctionsGCM {
 	}
 	
 	
-	
+	/** Get unread messages count for all device subscriptions  */
 	public function getUnreadCount($tokenAPN) {
 		// get all members the device is registered to be notified about
 		$result=mysql_query("SELECT uid FROM $this->tokenTable WHERE token='$tokenAPN'");
@@ -164,6 +167,7 @@ class DbFunctionsGCM {
 		return mysql_num_rows($result);
 	}
 	
+	/** Get all messages for all device subscriptions  */
 	public function getAllMessagesByToken($token) {
 		
 		$result=mysql_query("select * from messages
@@ -174,6 +178,7 @@ class DbFunctionsGCM {
 		return $result;
 	}
 	
+	/** Get all messages for a member  */
 	public function getAllMessagesByMember($acr_, $memId) {
 		$acr=strtoupper($acr_);
 		
@@ -184,6 +189,8 @@ class DbFunctionsGCM {
 		return $result;
 	}
 	
+	
+	/** <p><b>Deprecated</p></b> Get all messages for a member <p> old and dirty way</p>  */
 	public function getAllMessages($acr_, $memId) {
 		$acr=strtoupper($acr_);
 		// get all members the device is registered to be notified about
@@ -205,6 +212,7 @@ class DbFunctionsGCM {
 		return $result;
 	}
 	
+	/** Mark message as read  */
 	public function markMessageAsRead($mid) {
 		$result=mysql_query("SELECT * FROM messages WHERE mid='$mid'");
 		if (mysql_num_rows($result) == 0)
@@ -213,6 +221,7 @@ class DbFunctionsGCM {
 		return $result;
 	}
 	
+	/** Delete the message  */
 	public function deleteMessage($mid) {
 		$result=mysql_query("SELECT * FROM messages WHERE mid='$mid'");
 		if (mysql_num_rows($result) == 0)
@@ -221,6 +230,7 @@ class DbFunctionsGCM {
 		return $result;
 	}
 	
+	/** Get all unique tokens - usefull when displaying subscribed devices */
 	public function getDistinctTokens() {
 		return mysql_query("SELECT DISTINCT tid, token FROM `$this->tokenTable`");
 	}

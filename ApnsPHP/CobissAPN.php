@@ -17,10 +17,10 @@ class CobissAPN {
 		try {
 			$message = new ApnsPHP_Message($token);
 			$message->setCustomIdentifier("Message-Badge-".$badge);
-			$message->setText('Naroèeni ste na obvestila.');//.$memid.'@'.$acr.'.');
+			$message->setText('Naroceni ste na obvestila.');//.$memid.'@'.$acr.'.');
 			$message->setSound();
-			//$message->setCustomProperty('acme2', array('bang', 'whiz'));
-			//$message->setCustomProperty('acme3', array('bing', 'bong'));
+			$message->setCustomProperty('acme2', array('bang', 'whiz'));
+			$message->setCustomProperty('acme3', array('bing', 'bong'));
 			$message->setExpiry(30);
 			$push->add($message);
 			$push->send();
@@ -65,11 +65,11 @@ class CobissAPN {
 				$message = new ApnsPHP_Message($ids[$i]);
 				$message->setCustomIdentifier("Message-Badge-".$badge);
 				$message->setBadge(1*($badges[$i]));
-				$message->setText('Imate neprebrana sporoèila.');
+				$message->setText('Imate neprebrana sporocila.');
 				//$message->se
 				$message->setSound();
-				//$message->setCustomProperty('acme2', array('bang', 'whiz'));
-				//$message->setCustomProperty('acme3', array('bing', 'bong'));
+				$message->setCustomProperty('acme2', array('bang', 'whiz'));
+				$message->setCustomProperty('acme3', array('bing', 'bong'));
 				$message->setExpiry(30);
 				$push->add($message);
 			} catch (Exception $e) {
