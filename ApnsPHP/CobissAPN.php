@@ -17,7 +17,7 @@ class CobissAPN {
 		try {
 			$message = new ApnsPHP_Message($token);
 			$message->setCustomIdentifier("Message-Badge-".$badge);
-			$message->setText('Naročeni ste');//.$memid.'@'.$acr.'.');
+			$message->setText('Naročeni ste na sporočila '.$memid.'@'.$acr.'.');
 			$message->setSound();
 			$message->setCustomProperty('acme2', array('bang', 'whiz'));
 			$message->setCustomProperty('acme3', array('bing', 'bong'));
@@ -73,7 +73,7 @@ class CobissAPN {
 				$message->setCustomProperty('acme2', array('bang', 'whiz'));
 				$message->setCustomProperty('acme3', array('bing', 'bong'));
 				$message->setExpiry(30);
-				//$push->add($message);
+				$push->add($message);
 			} catch (Exception $e) {
 				print "\nCreating message failed";
 				print "\n\n".$e->getMessage()."\n";
