@@ -42,7 +42,7 @@ class ApnsPHP_Log_Embedded implements ApnsPHP_Log_Interface
 			date('r'), getmypid(), trim($sMessage)
 		);
 		*/
-		if (!($fp = fopen('apnLog.txt', 'w'))) {
+		if (!($fp = fopen('apnLog.txt', 'a+'))) {
 			return;
 		}
 		
