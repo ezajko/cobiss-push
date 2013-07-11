@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	
 	 //dump($xml);
 	print '<Push><Status>';
