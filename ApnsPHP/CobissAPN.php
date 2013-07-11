@@ -43,7 +43,7 @@ class CobissAPN {
 		}
 	}
 	
-	public static function notifyMany($ids, $badges) {
+	public static function notifyMany($ids, $badges, $text) {
 		
 		//date_default_timezone_set('Europe/Rome');
 		
@@ -67,7 +67,7 @@ class CobissAPN {
 				$message = new ApnsPHP_Message($ids[$i]);
 				$message->setCustomIdentifier("Message-Badge-".$badge);
 				$message->setBadge(1*($badges[$i]));
-				$message->setText('Imate neprebrana sporočila.');
+				$message->setText($text);
 				//print $message->getText();
 				$message->setSound();
 				$message->setCustomProperty('acme2', array('bang', 'whiz'));
