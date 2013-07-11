@@ -1,7 +1,7 @@
 <?php
 	
 	 //dump($xml);
-	print '<Push><Status>';
+	print "<Push><Status>";
 	
 	include_once '../lib/DbFunctionsGCM.php';
 	include_once '../lib/DbFunctionsAPN.php';
@@ -16,7 +16,7 @@
 		$mid=$gcm->addMessage($Title, $Message, $LibraryId, $MemberId);
 		
 		// notify androids
-		print '<gcm>';
+		print "<gcm>";
 		$users=$gcm->getAllRegistrationIds($LibraryId,$MemberId);
 		if ($users==0 || mysql_num_rows($users)==0) print 'no android devices';
 		else {
