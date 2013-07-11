@@ -43,7 +43,7 @@ class CobissAPN {
 		}
 	}
 	
-	public static function notifyMany($ids, $badges) {
+	public static function notifyManyDefault($ids, $badges) {
 		notifyMany($ids, $badges, "a message text");
 	}
 	
