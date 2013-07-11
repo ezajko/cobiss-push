@@ -16,7 +16,7 @@ if (isset($_GET["token"]) && isset($_GET["badge"]) ) {
 	$capn=new CobissAPN();
 	$tokens=array();
 	$tokens[]=$token;
-	print $capn->notifyMany($tokens, $badges);
+	print $capn->notifyManyDefault($tokens, $badges);
 	//echo pushOne($token, $badge);
 	//echo 'aafaf';
     
