@@ -21,7 +21,7 @@
 	$MemberId = (string)$xml->MemberId[0];
 	$Title = 	(string)$xml->Title[0];
 	$Message = 	(string)$xml->Message[0];
-	//print "title ".$Title."\n\n";
+	print "title ".$Title."\n\n";
 	require_once '../front/sendMessage.php';
 	
  }
