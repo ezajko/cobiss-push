@@ -18,7 +18,7 @@
 	$xml = simplexml_load_string($xml_post);
 	//print_r($xml);
 	$LibraryId= (string)strtoupper($xml->LibraryId[0]);
-	$MemberId = (string)$xml->MemberId[0];
+	$MemberId = (integer)$xml->MemberId[0];
 	$Title = 	(string)$xml->Title[0];
 	$Message = 	(string)$xml->Message[0];
 	//print "title ".$Title."\n\n";
