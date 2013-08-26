@@ -9,7 +9,7 @@ class CobissAPN {
 		require_once '../ApnsPHP/ApnsPHP/Autoload.php';
 		
 		$push = new ApnsPHP_Push(
-				ApnsPHP_Abstract::ENVIRONMENT_SANDBOX,
+				ApnsPHP_Abstract::ENVIRONMENT_PRODUCTION,
 				'../ApnsPHP/mcobiss.pem');
 		$push->setRootCertificationAuthority('../ApnsPHP/entrust.pem');
 		
@@ -56,7 +56,7 @@ class CobissAPN {
 		require_once '../ApnsPHP/ApnsPHP/Autoload.php';
 		
 		$push = new ApnsPHP_Push(
-				ApnsPHP_Abstract::ENVIRONMENT_SANDBOX,
+				ApnsPHP_Abstract::ENVIRONMENT_PRODUCTION,
 				'../ApnsPHP/mcobiss.pem');
 		$push->setRootCertificationAuthority('../ApnsPHP/entrust.pem');
 		
