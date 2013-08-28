@@ -49,7 +49,7 @@ class CobissAPN {
 	
 	public static function notifyMany($ids, $badges, $text) {
 		
-		//date_default_timezone_set('Europe/Rome');
+		date_default_timezone_set('Europe/Rome');
 		
 		error_reporting(-1);
 		
