@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<!--
+A user interface designed for testing purposes. Lists all subscribed memberships and device and message count.
+-->
+<!DOCTYPE html>
 <html>
     <head>
         <title>Members</title>

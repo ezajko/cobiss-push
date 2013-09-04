@@ -1,8 +1,8 @@
 <?php
  header('Content-Type: text/xml; charset=utf-8');
 /**
- * get apn messages
- * Store reg id in users table
+ * Gets notifications for the specified token in an XML form or returns
+ * an error.
  */
 print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
 print '<messages>';

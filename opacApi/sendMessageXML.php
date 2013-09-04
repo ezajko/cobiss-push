@@ -1,5 +1,9 @@
 <?php
-/*
+/**
+ * Used by OPAC server to send a notifiation to all devices for a specific membership.
+ * The parameters are submited as a XML structure.
+ */
+/* EXAMPLE OF SUBMITTED XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Push>
 	<LibraryId>SIKMB</LibraryId>

@@ -1,7 +1,8 @@
 <?php
  
 /**
- view-source:http://127.0.0.1/cobiss-push/apn/deleteMessage.php?mid=3
+ * Deletes the notification from the database. Message id is needed.
+ * Example:http://127.0.0.1/cobiss-push/apn/deleteMessage.php?mid=3
  */
 header('Content-Type: text/xml');
 print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';

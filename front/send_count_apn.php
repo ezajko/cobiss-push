@@ -1,4 +1,7 @@
 <?php
+/**
+ * A script that processes a get request to send a badge to a specified device.
+ */
 //header('Content-Type: text/html; charset=utf-8');
 echo 'vrh';
 if (isset($_GET["token"]) && isset($_GET["badge"]) ) {

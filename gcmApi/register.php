@@ -1,8 +1,9 @@
 <?php
 
 /**
- * Registering a user device
- * Store reg id in users table
+ * Subscribes the specified token to messages for the membership 
+ * specified by the acronym and membership id. Sends a welcome message
+ * if subsription successful.
  */
 
 header('Content-Type: text/xml; charset=utf-8');

@@ -1,12 +1,6 @@
 <?php
-/*
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Push>
-	<LibraryId>SIKMB</LibraryId>
-	<MemberId>0000137</MemberId>
-	<Title>Naslov</Title>
-	<Message>Besedilo obvestila...</Message>
-</Push>
+/**
+Processes the GET/POST parameters and calls sendMessage.php
 */
 
   header('Content-Type: text/xml');

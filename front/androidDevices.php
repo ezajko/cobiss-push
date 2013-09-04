@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<!--
+A user interface designed for testing purposes. Lists android devices and allows notifications
+to be send to an individual device without a message being stored to the database.
+-->
+<!DOCTYPE html>
 <html>
     <head>
         <title>Android Devices</title>

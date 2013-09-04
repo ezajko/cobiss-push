@@ -1,6 +1,8 @@
 <?php
 /**
- * Database config variables
+ * Database config variables. This file is accessible on a public github profile, therefore the information
+ * is removed. The actual config file is added to ignore list and should be manually created.
+ * Copy this one to config.php and modify the values.
  */
 define("DB_HOST", "localhost");
 define("DB_USER", "root");

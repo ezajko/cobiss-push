@@ -1,8 +1,8 @@
 <?php
  
 /**
- * Registering a user device
- * Store reg id in users table
+ *  Returns TRUE if the specified token is already subscribed to messages
+ *  for the membership specified by member id and acronym.
  */
 header('Content-Type: text/xml; charset=utf-8');
 print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';

@@ -1,7 +1,8 @@
 <?php
  
 /**
-cobiss-push/apn/markMessageAsRead.php?mid=3
+ * Marks the notification as read. Message id is needed.
+ * Example: cobiss-push/apn/markMessageAsRead.php?mid=3
  */
 header('Content-Type: text/xml');
 print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';

@@ -1,5 +1,10 @@
 <?php
- 
+
+/**
+ * Only holds a method for obtaining the list of subscribed memberships.
+ * @author matjaz
+ *
+ */
 class DbFunctionsCommon {
  
     private $db;

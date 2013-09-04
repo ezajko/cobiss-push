@@ -1,5 +1,10 @@
 <?php
- 
+
+/**
+ * Holds all operations for managing subsriptions and messages.
+ * @author matjaz
+ *
+ */
 class DbFunctionsGCM {
  
     protected $db;
@@ -190,7 +195,7 @@ class DbFunctionsGCM {
 	}
 	
 	
-	/** <p><b>Deprecated</p></b> Get all messages for a member <p> old and dirty way</p>  */
+	/** <p><b>Deprecated</p></b> Get all messages for a member.  */
 	public function getAllMessages($acr_, $memId) {
 		$acr=strtoupper($acr_);
 		// get all members the device is registered to be notified about

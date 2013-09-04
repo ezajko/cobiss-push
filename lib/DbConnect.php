@@ -1,5 +1,9 @@
 <?php
- 
+/**
+ * Holds utilites to connect to the MySQL database.
+ * @author matjaz
+ *
+ */
 class DbConnect {
  
     // constructor
@@ -12,7 +16,10 @@ class DbConnect {
         // $this->close();
     }
  
-    // Connecting to database
+    /**
+     * Returns the connection reference.
+     * @return resource The connection.
+     */
     public function connect() {
        // require_once 'config.php';
     	require_once '../lib/config.php';
@@ -26,7 +33,9 @@ class DbConnect {
         return $con;
     }
  
-    // Closing database connection
+    /**
+     * Closes the connection to the database.
+     */
     public function close() {
         mysql_close();
     }

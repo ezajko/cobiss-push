@@ -1,5 +1,9 @@
 <?php
- 
+/**
+ * Communicates to the GCM message server. Holds methods to send notifications.
+ * @author matjaz
+ *
+ */
 class GCMsender {
  
     //put your code here
@@ -7,11 +11,28 @@ class GCMsender {
     function __construct() {
     }
  
+    /**
+     * Sends a message to a list of tokens
+     * @param unknown $registatoin_ids The list of tokens.
+     * @param unknown $title The message title.
+     * @param unknown $message The message body.
+     * @param unknown $acr The library acronym.
+     * @param unknown $memid The membership id.
+     * @return the server response.
+     */
     public function send_notification($registatoin_ids, $title, $message, $acr, $memid) {
     	return $this->send_notification_mid($registatoin_ids, $title, $message, $acr, $memid,-1);
     }
     /**
-     * Sending Push Notification
+     * Sends a message to a list of tokens
+     * @param $registatoin_ids The list of tokens.
+     * @param $title The message title.
+     * @param $message The message body.
+     * @param $acr The library acronym.
+     * @param $memid The membership id.
+     * @param $mid The message ID - needed for deleting and marking the message
+     * from the device.
+     * @return the server response.
      */
     public function send_notification_mid($registatoin_ids, $title, $message, $acr, $memid,$mid) {
         // include config

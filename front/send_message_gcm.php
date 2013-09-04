@@ -1,4 +1,8 @@
 ﻿<?php
+/**
+ * Sends a specified message, title, acronym, membership id to the specified 
+ * token. Not used in production, for testing through androidDevices.php only. 
+ */
 header('Content-Type: text/html; charset=utf-8');
 //echo 'vrh';
 if (isset($_GET["regId"]) && isset($_GET["message"]) && 

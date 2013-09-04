@@ -1,5 +1,17 @@
 <?php
-	
+	/**
+	 * This script cannot be run directly, it should be called from sendMessagePar.php
+	 * or sendMessageXML.php. Requires variables to be defined first:
+	 * <ul>
+	 * <li>$Title</li>
+	 * <li>$Message</li>
+	 * <li>$LibraryId</li>
+	 * <li>$MemberId</li>
+	 * </ul>
+	 * 
+	 * It adds a message to the database and notifies devices. Prints a report as a XML.
+	 * 
+	 */
 	 //dump($xml);
 	print '<Push><Status>';
 	
@@ -42,8 +54,9 @@
 						$gcm->deleteToken($ids[$i]);
 					}
 				}
-			}
-			print 'OK';
+			} 
+			else
+				print 'OK';
 		}
 		print '</gcm>';
 	

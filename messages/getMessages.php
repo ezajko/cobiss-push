@@ -1,7 +1,7 @@
 <?php
  header('Content-Type: text/xml; charset=utf-8');
 /**
- * get apn messages
+ * Gets notifications for the membership specified by an acronym and a membership id.
  * Store reg id in users table
  */
 print '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';

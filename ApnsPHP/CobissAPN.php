@@ -1,6 +1,18 @@
 <?php
-class CobissAPN {
-	
+/**
+ * ApnsPHP implementation for mCOBISS. Holds static methods for batch sending
+ * notifications and the welcome notification on registration. 
+ * 
+ */
+ class CobissAPN {
+	/**
+	 * Sends a notification to inform the device that it has been successfully
+	 * subscribed to notifications for the specified library membership.
+	 * 
+	 * @param unknown $token The device token.
+	 * @param unknown $memid The member's ID
+	 * @param unknown $acr The acronym of the library.
+	 */
 	public static function sendVelcomeMessage($token, $memid, $acr) {
 		$result=1;
 		date_default_timezone_set('Europe/Rome');
@@ -43,10 +55,25 @@ class CobissAPN {
 		}
 	}
 	
+	/**
+	 * DEPRECATED - for testing only
+	 * @param unknown $ids
+	 * @param unknown $badges
+	 */
 	public static function notifyManyDefault($ids, $badges) {
 		notifyMany($ids, $badges, "a message text");
 	}
 	
+	/**
+	 * Sends a notification to listed devices. The message holds
+	 * a text and a badge - the number of unread messages.
+	 * 
+	 * @param unknown $ids Array of tokens
+	 * @param unknown $badges Array of badges - notification count
+	 * @param unknown $text - The body of the message.
+	 * @return multitype:unknown A list of tokens to which notifications
+	 * weren't delivered.
+	 */
 	public static function notifyMany($ids, $badges, $text) {
 		
 		date_default_timezone_set('Europe/Rome');

@@ -1,3 +1,7 @@
+<!--
+A user interface designed for testing purposes. Lists iOS devices and allows badges
+to be send to an individual device without the message being stored to the database.
+-->
 <!DOCTYPE html>
 <html>
     <head>
