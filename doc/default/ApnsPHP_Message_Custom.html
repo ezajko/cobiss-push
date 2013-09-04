@@ -1,0 +1,842 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Docs For Class ApnsPHP_Message_Custom</title>
+	<link rel="stylesheet" type="text/css" id="layout" href="../media/layout.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../media/style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../media/print.css" media="print">
+</head>
+
+<body>
+<div id="header">
+	<div id="navLinks">
+        
+                                    
+                            	        [ <a href="../classtrees_default.html">Class Tree: default</a> ]
+            [ <a href="../elementindex_default.html">Index: default</a> ]
+        		[ <a href="../elementindex.html">All elements</a> ]		
+	</div>
+	<div id="packagePosition">
+		<div id="packageTitle2">default</div>
+		<div id="packageTitle">default</div>
+		<div id="elementPath"> &middot; </div>
+	</div>
+</div>
+
+<div id="nav" class="small">
+	<div id="packages">
+		Packages:
+					<p><a href="../li_default.html">default</a></p>
+			</div>
+
+				<div id="index">
+			<div id="files">
+								Files:<br>
+								<a href="../default/_ApnsPHP---ApnsPHP---Abstract.php.html">		Abstract.php
+		</a><br>
+			<a href="../default/_front---androidDevices.php.html">		androidDevices.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Autoload.php.html">		Autoload.php
+		</a><br>
+			<a href="../default/_ApnsPHP---CobissAPN.php.html">		CobissAPN.php
+		</a><br>
+			<a href="../default/_lib---configTemplate.php.html">		configTemplate.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Message---Custom.php.html">		Custom.php
+		</a><br>
+			<a href="../default/_lib---DbConnect.php.html">		DbConnect.php
+		</a><br>
+			<a href="../default/_lib---DbFunctionsAPN.php.html">		DbFunctionsAPN.php
+		</a><br>
+			<a href="../default/_lib---DbFunctionsCommon.php.html">		DbFunctionsCommon.php
+		</a><br>
+			<a href="../default/_lib---DbFunctionsGCM.php.html">		DbFunctionsGCM.php
+		</a><br>
+			<a href="../default/_old---db_connect.php.html">		db_connect.php
+		</a><br>
+			<a href="../default/_old---db_functions.php.html">		db_functions.php
+		</a><br>
+			<a href="../default/_old---db_functions_push.php.html">		db_functions_push.php
+		</a><br>
+			<a href="../default/_gcmApi---definitions.php.html">		definitions.php
+		</a><br>
+			<a href="../default/_messages---deleteMessage.php.html">		deleteMessage.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Log---Embedded.php.html">		Embedded.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Message---Exception.php.html">		Exception.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Exception.php.html">		Exception.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Push---Server---Exception.php.html">		Exception.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Push---Exception.php.html">		Exception.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Feedback.php.html">		Feedback.php
+		</a><br>
+			<a href="../default/_lib---GCMsender.php.html">		GCMsender.php
+		</a><br>
+			<a href="../default/_old---getids.php.html">		getids.php
+		</a><br>
+			<a href="../default/_messages---getMessages.php.html">		getMessages.php
+		</a><br>
+			<a href="../default/_gcmApi---getMessages.php.html">		getMessages.php
+		</a><br>
+			<a href="../default/_apnApi---getMessages.php.html">		getMessages.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Log---Interface.php.html">		Interface.php
+		</a><br>
+			<a href="../default/_front---iosDevices.php.html">		iosDevices.php
+		</a><br>
+			<a href="../default/_apnApi---isregistered.php.html">		isregistered.php
+		</a><br>
+			<a href="../default/_gcmApi---isregistered.php.html">		isregistered.php
+		</a><br>
+			<a href="../default/_old---isregistered.php.html">		isregistered.php
+		</a><br>
+			<a href="../default/_messages---markMessageAsRead.php.html">		markMessageAsRead.php
+		</a><br>
+			<a href="../default/_front---members.php.html">		members.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Message.php.html">		Message.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Push.php.html">		Push.php
+		</a><br>
+			<a href="../default/_ApnsPHP---pushAll.php.html">		pushAll.php
+		</a><br>
+			<a href="../default/_ApnsPHP---pushOne.php.html">		pushOne.php
+		</a><br>
+			<a href="../default/_old---register.php.html">		register.php
+		</a><br>
+			<a href="../default/_apnApi---register.php.html">		register.php
+		</a><br>
+			<a href="../default/_gcmApi---register.php.html">		register.php
+		</a><br>
+			<a href="../default/_old---register_apn.php.html">		register_apn.php
+		</a><br>
+			<a href="../default/_old---register_gcm.php.html">		register_gcm.php
+		</a><br>
+			<a href="../default/_ApnsPHP---samplePush.php.html">		samplePush.php
+		</a><br>
+			<a href="../default/_ApnsPHP---sample_feedback.php.html">		sample_feedback.php
+		</a><br>
+			<a href="../default/_ApnsPHP---sample_push_custom.php.html">		sample_push_custom.php
+		</a><br>
+			<a href="../default/_ApnsPHP---sample_push_many.php.html">		sample_push_many.php
+		</a><br>
+			<a href="../default/_ApnsPHP---sample_server.php.html">		sample_server.php
+		</a><br>
+			<a href="../default/_front---sendMessage.php.html">		sendMessage.php
+		</a><br>
+			<a href="../default/_front---sendMessagePar.php.html">		sendMessagePar.php
+		</a><br>
+			<a href="../default/_opacApi---sendMessageXML.php.html">		sendMessageXML.php
+		</a><br>
+			<a href="../default/_front---send_count_apn.php.html">		send_count_apn.php
+		</a><br>
+			<a href="../default/_ApnsPHP---send_count_apn.php.html">		send_count_apn.php
+		</a><br>
+			<a href="../default/_front---send_message_gcm.php.html">		send_message_gcm.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Push---Server.php.html">		Server.php
+		</a><br>
+			<a href="../default/_ApnsPHP---simpleSend.php.html">		simpleSend.php
+		</a><br>
+			<a href="../default/_old---unregister.php.html">		unregister.php
+		</a><br>
+			<a href="../default/_apnApi---unregister.php.html">		unregister.php
+		</a><br>
+			<a href="../default/_gcmApi---unregister.php.html">		unregister.php
+		</a><br>
+				</div>
+			<div id="interfaces">
+				Interfaces:<br>
+								<a href="../default/ApnsPHP_Log_Interface.html">		ApnsPHP_Log_Interface
+		</a><br>
+				</div>
+			<div id="classes">
+				Classes:<br>
+								<a href="../default/ApnsPHP_Abstract.html">		ApnsPHP_Abstract
+		</a><br>
+			<a href="../default/ApnsPHP_Exception.html">		ApnsPHP_Exception
+		</a><br>
+			<a href="../default/ApnsPHP_Feedback.html">		ApnsPHP_Feedback
+		</a><br>
+			<a href="../default/ApnsPHP_Log_Embedded.html">		ApnsPHP_Log_Embedded
+		</a><br>
+			<a href="../default/ApnsPHP_Message.html">		ApnsPHP_Message
+		</a><br>
+			<a href="../default/ApnsPHP_Message_Custom.html">		ApnsPHP_Message_Custom
+		</a><br>
+			<a href="../default/ApnsPHP_Message_Exception.html">		ApnsPHP_Message_Exception
+		</a><br>
+			<a href="../default/ApnsPHP_Push.html">		ApnsPHP_Push
+		</a><br>
+			<a href="../default/ApnsPHP_Push_Exception.html">		ApnsPHP_Push_Exception
+		</a><br>
+			<a href="../default/ApnsPHP_Push_Server.html">		ApnsPHP_Push_Server
+		</a><br>
+			<a href="../default/ApnsPHP_Push_Server_Exception.html">		ApnsPHP_Push_Server_Exception
+		</a><br>
+			<a href="../default/CobissAPN.html">		CobissAPN
+		</a><br>
+			<a href="../default/DbConnect.html">		DbConnect
+		</a><br>
+			<a href="../default/DbFunctionsAPN.html">		DbFunctionsAPN
+		</a><br>
+			<a href="../default/DbFunctionsCommon.html">		DbFunctionsCommon
+		</a><br>
+			<a href="../default/DbFunctionsGCM.html">		DbFunctionsGCM
+		</a><br>
+			<a href="../default/DB_Connect.html">		DB_Connect
+		</a><br>
+			<a href="../default/DB_Functions.html">		DB_Functions
+		</a><br>
+			<a href="../default/DB_Functions_push.html">		DB_Functions_push
+		</a><br>
+			<a href="../default/GCMsender.html">		GCMsender
+		</a><br>
+				</div>
+		</div>
+	</div>
+
+<div id="body">
+	    		<h1>Class: ApnsPHP_Message_Custom</h1>
+	<p style="margin: 0px;">Source Location: /ApnsPHP/ApnsPHP/Message/Custom.php</p>
+	
+
+<div class="leftcol">
+	<h3><a href="#class_details">Class Overview</a> <span class="smalllinenumber">[line 29]</span></h3>
+	<div id="classTree"><pre><a href="../default/ApnsPHP_Message.html">ApnsPHP_Message</a>
+   |
+   --ApnsPHP_Message_Custom</pre>
+</div>
+	<div class="small">
+	<p>The Push Notification Custom Message.</p>
+		<h4>Author(s):</h4>
+	<ul>
+								</ul>
+	<h4>Version:</h4>
+	<ul>
+								</ul>
+
+	<h4>Copyright:</h4>
+	<ul>
+								</li>
+	</div>
+</div>
+
+<div class="middlecol">
+	<h3><a href="#class_vars">Variables</a></h3>
+	<ul class="small">
+				<li><a href="../default/ApnsPHP_Message_Custom.html#var$_aLocArgs">$_aLocArgs</a></li>
+				<li><a href="../default/ApnsPHP_Message_Custom.html#var$_sActionLocKey">$_sActionLocKey</a></li>
+				<li><a href="../default/ApnsPHP_Message_Custom.html#var$_sLaunchImage">$_sLaunchImage</a></li>
+				<li><a href="../default/ApnsPHP_Message_Custom.html#var$_sLocKey">$_sLocKey</a></li>
+			</ul>
+	<h3><a href="#class_consts">Constants</a></h3>
+	<ul class="small">
+			</ul>
+</div>
+<div class="rightcol">
+	<h3><a href="#class_methods">Methods</a></h3>
+	<ul class="small">
+				<li><a href="../default/ApnsPHP_Message_Custom.html#methodgetActionLocKey">getActionLocKey</a></li>
+				<li><a href="../default/ApnsPHP_Message_Custom.html#methodgetLaunchImage">getLaunchImage</a></li>
+				<li><a href="../default/ApnsPHP_Message_Custom.html#methodgetLocArgs">getLocArgs</a></li>
+				<li><a href="../default/ApnsPHP_Message_Custom.html#methodgetLocKey">getLocKey</a></li>
+				<li><a href="../default/ApnsPHP_Message_Custom.html#methodsetActionLocKey">setActionLocKey</a></li>
+				<li><a href="../default/ApnsPHP_Message_Custom.html#methodsetLaunchImage">setLaunchImage</a></li>
+				<li><a href="../default/ApnsPHP_Message_Custom.html#methodsetLocArgs">setLocArgs</a></li>
+				<li><a href="../default/ApnsPHP_Message_Custom.html#methodsetLocKey">setLocKey</a></li>
+				<li><a href="../default/ApnsPHP_Message_Custom.html#method_getPayload">_getPayload</a></li>
+			</ul>
+</div>
+
+<div id="content">
+<hr>
+	<div class="contents">
+	</div>
+
+	<div class="leftCol">
+    	<h2>Inherited Variables</h2>
+			<div class="indent">
+		<h3>Class: <a href="../default/ApnsPHP_Message.html">ApnsPHP_Message</a></h3>
+		<div class="small">
+			<dl>
+						<dt>
+				<a href="../default/ApnsPHP_Message.html#var$_aCustomProperties">ApnsPHP_Message::$_aCustomProperties</a>
+			</dt>
+			<dd>
+				 
+			</dd>
+						<dt>
+				<a href="../default/ApnsPHP_Message.html#var$_aDeviceTokens">ApnsPHP_Message::$_aDeviceTokens</a>
+			</dt>
+			<dd>
+				 
+			</dd>
+						<dt>
+				<a href="../default/ApnsPHP_Message.html#var$_bAutoAdjustLongPayload">ApnsPHP_Message::$_bAutoAdjustLongPayload</a>
+			</dt>
+			<dd>
+				 
+			</dd>
+						<dt>
+				<a href="../default/ApnsPHP_Message.html#var$_bContentAvailable">ApnsPHP_Message::$_bContentAvailable</a>
+			</dt>
+			<dd>
+				 
+			</dd>
+						<dt>
+				<a href="../default/ApnsPHP_Message.html#var$_mCustomIdentifier">ApnsPHP_Message::$_mCustomIdentifier</a>
+			</dt>
+			<dd>
+				 
+			</dd>
+						<dt>
+				<a href="../default/ApnsPHP_Message.html#var$_nBadge">ApnsPHP_Message::$_nBadge</a>
+			</dt>
+			<dd>
+				 
+			</dd>
+						<dt>
+				<a href="../default/ApnsPHP_Message.html#var$_nExpiryValue">ApnsPHP_Message::$_nExpiryValue</a>
+			</dt>
+			<dd>
+				 
+			</dd>
+						<dt>
+				<a href="../default/ApnsPHP_Message.html#var$_sSound">ApnsPHP_Message::$_sSound</a>
+			</dt>
+			<dd>
+				 
+			</dd>
+						<dt>
+				<a href="../default/ApnsPHP_Message.html#var$_sText">ApnsPHP_Message::$_sText</a>
+			</dt>
+			<dd>
+				 
+			</dd>
+						</dl>
+		</div>
+		</div>
+		<h2>Inherited Constants</h2>
+			<div class="indent">
+		<h3>Class: <a href="../default/ApnsPHP_Message.html">ApnsPHP_Message</a></h3>
+		<div class="small">
+			<dl>
+						<dt>
+				<a href="../default/ApnsPHP_Message.html#constAPPLE_RESERVED_NAMESPACE">ApnsPHP_Message::APPLE_RESERVED_NAMESPACE</a>
+			</dt>
+			<dd>
+				 
+			</dd>
+						<dt>
+				<a href="../default/ApnsPHP_Message.html#constPAYLOAD_MAXIMUM_SIZE">ApnsPHP_Message::PAYLOAD_MAXIMUM_SIZE</a>
+			</dt>
+			<dd>
+				 
+			</dd>
+						</dl>
+		</div>
+		</div>
+		</div>
+
+	<div class="rightCol">
+	<h2>Inherited Methods</h2>
+			<div class="indent">
+		<h3>Class: <a href="../default/ApnsPHP_Message.html">ApnsPHP_Message</a></h3>
+		<dl class="small">
+						<dt>
+				<a href="../default/ApnsPHP_Message.html#method__construct">ApnsPHP_Message::__construct()</a>
+			</dt>
+			<dd>
+				Constructor.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodaddRecipient">ApnsPHP_Message::addRecipient()</a>
+			</dt>
+			<dd>
+				Add a recipient device token.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetAutoAdjustLongPayload">ApnsPHP_Message::getAutoAdjustLongPayload()</a>
+			</dt>
+			<dd>
+				Get the auto-adjust long payload value.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetBadge">ApnsPHP_Message::getBadge()</a>
+			</dt>
+			<dd>
+				Get the number to badge the application icon with.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetContentAvailable">ApnsPHP_Message::getContentAvailable()</a>
+			</dt>
+			<dd>
+				Get if should initiates the Newsstand background download.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetCustomIdentifier">ApnsPHP_Message::getCustomIdentifier()</a>
+			</dt>
+			<dd>
+				Get the custom message identifier.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetCustomProperty">ApnsPHP_Message::getCustomProperty()</a>
+			</dt>
+			<dd>
+				Get the custom property value.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetCustomPropertyName">ApnsPHP_Message::getCustomPropertyName()</a>
+			</dt>
+			<dd>
+				Get the first custom property name.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetCustomPropertyNames">ApnsPHP_Message::getCustomPropertyNames()</a>
+			</dt>
+			<dd>
+				Get all custom properties names.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetCustomPropertyValue">ApnsPHP_Message::getCustomPropertyValue()</a>
+			</dt>
+			<dd>
+				Get the first custom property value.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetExpiry">ApnsPHP_Message::getExpiry()</a>
+			</dt>
+			<dd>
+				Get the expiry value.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetPayload">ApnsPHP_Message::getPayload()</a>
+			</dt>
+			<dd>
+				Convert the message in a JSON-encoded payload.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetRecipient">ApnsPHP_Message::getRecipient()</a>
+			</dt>
+			<dd>
+				Get a recipient.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetRecipients">ApnsPHP_Message::getRecipients()</a>
+			</dt>
+			<dd>
+				Get all recipients.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetRecipientsNumber">ApnsPHP_Message::getRecipientsNumber()</a>
+			</dt>
+			<dd>
+				Get the number of recipients.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetSound">ApnsPHP_Message::getSound()</a>
+			</dt>
+			<dd>
+				Get the sound to play.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodgetText">ApnsPHP_Message::getText()</a>
+			</dt>
+			<dd>
+				Get the alert message to display to the user.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodsetAutoAdjustLongPayload">ApnsPHP_Message::setAutoAdjustLongPayload()</a>
+			</dt>
+			<dd>
+				Set the auto-adjust long payload value.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodsetBadge">ApnsPHP_Message::setBadge()</a>
+			</dt>
+			<dd>
+				Set the number to badge the application icon with.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodsetContentAvailable">ApnsPHP_Message::setContentAvailable()</a>
+			</dt>
+			<dd>
+				Initiates the Newsstand background download.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodsetCustomIdentifier">ApnsPHP_Message::setCustomIdentifier()</a>
+			</dt>
+			<dd>
+				Set the custom message identifier.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodsetCustomProperty">ApnsPHP_Message::setCustomProperty()</a>
+			</dt>
+			<dd>
+				Set a custom property.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodsetExpiry">ApnsPHP_Message::setExpiry()</a>
+			</dt>
+			<dd>
+				Set the expiry value.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodsetSound">ApnsPHP_Message::setSound()</a>
+			</dt>
+			<dd>
+				Set the sound to play.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#methodsetText">ApnsPHP_Message::setText()</a>
+			</dt>
+			<dd>
+				Set the alert message to display to the user.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#method_getPayload">ApnsPHP_Message::_getPayload()</a>
+			</dt>
+			<dd>
+				Get the payload dictionary.
+			</dd>
+					<dt>
+				<a href="../default/ApnsPHP_Message.html#method__toString">ApnsPHP_Message::__toString()</a>
+			</dt>
+			<dd>
+				PHP Magic Method. When an object is &quot;converted&quot; to a string, JSON-encoded  payload is returned.
+			</dd>
+				</dl>
+		</div>
+		</div>
+	<br clear="all">
+	<hr>
+
+	<a name="class_details"></a>
+	<h2>Class Details</h2>
+	<p align="center"><strong>The Push Notification Custom Message.
+</strong></p>
+<p>The class represents a custom message to be delivered to an end user device.  Please refer to Table 3-2 for more information.</p><h4>Tags:</h4>
+<ul>
+	<li><b>see</b> - <a href="http://tinyurl.com/ApplePushNotificationPayload">http://tinyurl.com/ApplePushNotificationPayload</a></li>
+</ul>
+	<p class="small" style="color: #334B66;">[ <a href="#top">Top</a> ]</p>
+
+	<hr>
+	<a name="class_vars"></a>
+	<h2>Class Variables</h2>
+		<a name="var$_aLocArgs"></a>
+	<p></p>
+	<h4>$_aLocArgs</h4>
+	<div class="indent">
+		<p class="linenumber">[line 33]</p>
+		<p align="center"><strong>&lt; @type string A key to an alert-message string in a Localizable.strings file
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - protected</li>
+</ul>
+		<p><b>Type:</b> mixed</p>
+		<p><b>Overrides:</b> </p>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="var$_sActionLocKey"></a>
+	<p></p>
+	<h4>$_sActionLocKey</h4>
+	<div class="indent">
+		<p class="linenumber">[line 31]</p>
+		<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - protected</li>
+</ul>
+		<p><b>Type:</b> mixed</p>
+		<p><b>Overrides:</b> </p>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="var$_sLaunchImage"></a>
+	<p></p>
+	<h4>$_sLaunchImage</h4>
+	<div class="indent">
+		<p class="linenumber">[line 34]</p>
+		<p align="center"><strong>&lt; @type array Variable string values to appear in place of the format specifiers in loc-key.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - protected</li>
+</ul>
+		<p><b>Type:</b> mixed</p>
+		<p><b>Overrides:</b> </p>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="var$_sLocKey"></a>
+	<p></p>
+	<h4>$_sLocKey</h4>
+	<div class="indent">
+		<p class="linenumber">[line 32]</p>
+		<p align="center"><strong>&lt; @type string The &quot;View&quot; button title.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - protected</li>
+</ul>
+		<p><b>Type:</b> mixed</p>
+		<p><b>Overrides:</b> </p>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+
+	<hr>
+	<a name="class_methods"></a>
+	<h2>Class Methods</h2>
+	
+	<a name="methodgetActionLocKey"></a>
+	<p></p>
+	<h3>getActionLocKey</h3>
+	<div class="indent">
+		<p>
+		<code>@type getActionLocKey(
+)</code>
+		</p>
+	
+		<p class="linenumber">[line 58]</p>
+		<p align="center"><strong>Get the &quot;View&quot; button title.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - string The &quot;View&quot; button title.</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetLaunchImage"></a>
+	<p></p>
+	<h3>getLaunchImage</h3>
+	<div class="indent">
+		<p>
+		<code>@type getLaunchImage(
+)</code>
+		</p>
+	
+		<p class="linenumber">[line 131]</p>
+		<p align="center"><strong>Get the filename of an image file in the application bundle.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - string The filename of an image file.</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetLocArgs"></a>
+	<p></p>
+	<h3>getLocArgs</h3>
+	<div class="indent">
+		<p>
+		<code>@type getLocArgs(
+)</code>
+		</p>
+	
+		<p class="linenumber">[line 104]</p>
+		<p align="center"><strong>Get the variable string values to appear in place of the format specifiers  in loc-key.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - string The variable string values.</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetLocKey"></a>
+	<p></p>
+	<h3>getLocKey</h3>
+	<div class="indent">
+		<p>
+		<code>@type getLocKey(
+)</code>
+		</p>
+	
+		<p class="linenumber">[line 82]</p>
+		<p align="center"><strong>Get the alert-message string in Localizable.strings file.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - string The alert-message string.</li>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodsetActionLocKey"></a>
+	<p></p>
+	<h3>setActionLocKey</h3>
+	<div class="indent">
+		<p>
+		<code>void setActionLocKey(
+[$sActionLocKey
+$sActionLocKey = ''])</code>
+		</p>
+	
+		<p class="linenumber">[line 48]</p>
+		<p align="center"><strong>Set the &quot;View&quot; button title.
+</strong></p>
+<p>If a string is specified, displays an alert with two buttons.  iOS uses the string as a key to get a localized string in the current localization  to use for the right button’s title instead of &quot;View&quot;. If the value is an  empty string, the system displays an alert with a single OK button that simply  dismisses the alert when tapped.</p><h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">$sActionLocKey</span>
+		<b>$sActionLocKey</b> 
+		- 
+		@type string @optional The &quot;View&quot; button title, default          empty string.</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodsetLaunchImage"></a>
+	<p></p>
+	<h3>setLaunchImage</h3>
+	<div class="indent">
+		<p>
+		<code>void setLaunchImage(
+$sLaunchImage
+$sLaunchImage)</code>
+		</p>
+	
+		<p class="linenumber">[line 121]</p>
+		<p align="center"><strong>Set the filename of an image file in the application bundle; it may include  the extension or omit it.
+</strong></p>
+<p>The image is used as the launch image when users tap the action button or  move the action slider. If this property is not specified, the system either  uses the previous snapshot, uses the image identified by the UILaunchImageFile  key in the application’s Info.plist file, or falls back to Default.png.  This property was added in iOS 4.0.</p><h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">$sLaunchImage</span>
+		<b>$sLaunchImage</b> 
+		- 
+		@type string The filename of an image file.</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodsetLocArgs"></a>
+	<p></p>
+	<h3>setLocArgs</h3>
+	<div class="indent">
+		<p>
+		<code>void setLocArgs(
+$aLocArgs
+$aLocArgs)</code>
+		</p>
+	
+		<p class="linenumber">[line 93]</p>
+		<p align="center"><strong>Set the variable string values to appear in place of the format specifiers  in loc-key.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">$aLocArgs</span>
+		<b>$aLocArgs</b> 
+		- 
+		@type array The variable string values.</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodsetLocKey"></a>
+	<p></p>
+	<h3>setLocKey</h3>
+	<div class="indent">
+		<p>
+		<code>void setLocKey(
+$sLocKey
+$sLocKey)</code>
+		</p>
+	
+		<p class="linenumber">[line 72]</p>
+		<p align="center"><strong>Set the alert-message string in Localizable.strings file for the current  localization (which is set by the user’s language preference).
+</strong></p>
+<p>The key string can be formatted with %@ and %n$@ specifiers to take the variables  specified in loc-args.</p><h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type">$sLocKey</span>
+		<b>$sLocKey</b> 
+		- 
+		@type string The alert-message string.</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="method_getPayload"></a>
+	<p></p>
+	<h3>_getPayload</h3>
+	<div class="indent">
+		<p>
+		<code>@type _getPayload(
+)</code>
+		</p>
+	
+		<p class="linenumber">[line 141]</p>
+		<p align="center"><strong>Get the payload dictionary.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>return</b> - array The payload dictionary.</li>
+	<li><b>access</b> - protected</li>
+</ul>
+		
+<p>Overrides <a href="../default/ApnsPHP_Message.html#method_getPayload">ApnsPHP_Message::_getPayload()</a> (Get the payload dictionary.)</p>	
+	<h4>Parameters:</h4>
+	<ul>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+
+	<hr>
+	<a name="class_consts"></a>
+	<h2>Class Constants</h2>
+	</div>
+	<div id="credit">
+		<hr>
+		Documentation generated on Wed, 04 Sep 2013 18:58:32 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.4</a>
+	</div>
+</div>
+</body>
+</html>

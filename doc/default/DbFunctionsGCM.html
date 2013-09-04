@@ -1,0 +1,851 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Docs For Class DbFunctionsGCM</title>
+	<link rel="stylesheet" type="text/css" id="layout" href="../media/layout.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="../media/style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../media/print.css" media="print">
+</head>
+
+<body>
+<div id="header">
+	<div id="navLinks">
+        
+                                    
+                            	        [ <a href="../classtrees_default.html">Class Tree: default</a> ]
+            [ <a href="../elementindex_default.html">Index: default</a> ]
+        		[ <a href="../elementindex.html">All elements</a> ]		
+	</div>
+	<div id="packagePosition">
+		<div id="packageTitle2">default</div>
+		<div id="packageTitle">default</div>
+		<div id="elementPath"> &middot; </div>
+	</div>
+</div>
+
+<div id="nav" class="small">
+	<div id="packages">
+		Packages:
+					<p><a href="../li_default.html">default</a></p>
+			</div>
+
+				<div id="index">
+			<div id="files">
+								Files:<br>
+								<a href="../default/_ApnsPHP---ApnsPHP---Abstract.php.html">		Abstract.php
+		</a><br>
+			<a href="../default/_front---androidDevices.php.html">		androidDevices.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Autoload.php.html">		Autoload.php
+		</a><br>
+			<a href="../default/_ApnsPHP---CobissAPN.php.html">		CobissAPN.php
+		</a><br>
+			<a href="../default/_lib---configTemplate.php.html">		configTemplate.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Message---Custom.php.html">		Custom.php
+		</a><br>
+			<a href="../default/_lib---DbConnect.php.html">		DbConnect.php
+		</a><br>
+			<a href="../default/_lib---DbFunctionsAPN.php.html">		DbFunctionsAPN.php
+		</a><br>
+			<a href="../default/_lib---DbFunctionsCommon.php.html">		DbFunctionsCommon.php
+		</a><br>
+			<a href="../default/_lib---DbFunctionsGCM.php.html">		DbFunctionsGCM.php
+		</a><br>
+			<a href="../default/_old---db_connect.php.html">		db_connect.php
+		</a><br>
+			<a href="../default/_old---db_functions.php.html">		db_functions.php
+		</a><br>
+			<a href="../default/_old---db_functions_push.php.html">		db_functions_push.php
+		</a><br>
+			<a href="../default/_gcmApi---definitions.php.html">		definitions.php
+		</a><br>
+			<a href="../default/_messages---deleteMessage.php.html">		deleteMessage.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Log---Embedded.php.html">		Embedded.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Message---Exception.php.html">		Exception.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Exception.php.html">		Exception.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Push---Server---Exception.php.html">		Exception.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Push---Exception.php.html">		Exception.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Feedback.php.html">		Feedback.php
+		</a><br>
+			<a href="../default/_lib---GCMsender.php.html">		GCMsender.php
+		</a><br>
+			<a href="../default/_old---getids.php.html">		getids.php
+		</a><br>
+			<a href="../default/_messages---getMessages.php.html">		getMessages.php
+		</a><br>
+			<a href="../default/_gcmApi---getMessages.php.html">		getMessages.php
+		</a><br>
+			<a href="../default/_apnApi---getMessages.php.html">		getMessages.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Log---Interface.php.html">		Interface.php
+		</a><br>
+			<a href="../default/_front---iosDevices.php.html">		iosDevices.php
+		</a><br>
+			<a href="../default/_apnApi---isregistered.php.html">		isregistered.php
+		</a><br>
+			<a href="../default/_gcmApi---isregistered.php.html">		isregistered.php
+		</a><br>
+			<a href="../default/_old---isregistered.php.html">		isregistered.php
+		</a><br>
+			<a href="../default/_messages---markMessageAsRead.php.html">		markMessageAsRead.php
+		</a><br>
+			<a href="../default/_front---members.php.html">		members.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Message.php.html">		Message.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Push.php.html">		Push.php
+		</a><br>
+			<a href="../default/_ApnsPHP---pushAll.php.html">		pushAll.php
+		</a><br>
+			<a href="../default/_ApnsPHP---pushOne.php.html">		pushOne.php
+		</a><br>
+			<a href="../default/_old---register.php.html">		register.php
+		</a><br>
+			<a href="../default/_apnApi---register.php.html">		register.php
+		</a><br>
+			<a href="../default/_gcmApi---register.php.html">		register.php
+		</a><br>
+			<a href="../default/_old---register_apn.php.html">		register_apn.php
+		</a><br>
+			<a href="../default/_old---register_gcm.php.html">		register_gcm.php
+		</a><br>
+			<a href="../default/_ApnsPHP---samplePush.php.html">		samplePush.php
+		</a><br>
+			<a href="../default/_ApnsPHP---sample_feedback.php.html">		sample_feedback.php
+		</a><br>
+			<a href="../default/_ApnsPHP---sample_push_custom.php.html">		sample_push_custom.php
+		</a><br>
+			<a href="../default/_ApnsPHP---sample_push_many.php.html">		sample_push_many.php
+		</a><br>
+			<a href="../default/_ApnsPHP---sample_server.php.html">		sample_server.php
+		</a><br>
+			<a href="../default/_front---sendMessage.php.html">		sendMessage.php
+		</a><br>
+			<a href="../default/_front---sendMessagePar.php.html">		sendMessagePar.php
+		</a><br>
+			<a href="../default/_opacApi---sendMessageXML.php.html">		sendMessageXML.php
+		</a><br>
+			<a href="../default/_front---send_count_apn.php.html">		send_count_apn.php
+		</a><br>
+			<a href="../default/_ApnsPHP---send_count_apn.php.html">		send_count_apn.php
+		</a><br>
+			<a href="../default/_front---send_message_gcm.php.html">		send_message_gcm.php
+		</a><br>
+			<a href="../default/_ApnsPHP---ApnsPHP---Push---Server.php.html">		Server.php
+		</a><br>
+			<a href="../default/_ApnsPHP---simpleSend.php.html">		simpleSend.php
+		</a><br>
+			<a href="../default/_old---unregister.php.html">		unregister.php
+		</a><br>
+			<a href="../default/_apnApi---unregister.php.html">		unregister.php
+		</a><br>
+			<a href="../default/_gcmApi---unregister.php.html">		unregister.php
+		</a><br>
+				</div>
+			<div id="interfaces">
+				Interfaces:<br>
+								<a href="../default/ApnsPHP_Log_Interface.html">		ApnsPHP_Log_Interface
+		</a><br>
+				</div>
+			<div id="classes">
+				Classes:<br>
+								<a href="../default/ApnsPHP_Abstract.html">		ApnsPHP_Abstract
+		</a><br>
+			<a href="../default/ApnsPHP_Exception.html">		ApnsPHP_Exception
+		</a><br>
+			<a href="../default/ApnsPHP_Feedback.html">		ApnsPHP_Feedback
+		</a><br>
+			<a href="../default/ApnsPHP_Log_Embedded.html">		ApnsPHP_Log_Embedded
+		</a><br>
+			<a href="../default/ApnsPHP_Message.html">		ApnsPHP_Message
+		</a><br>
+			<a href="../default/ApnsPHP_Message_Custom.html">		ApnsPHP_Message_Custom
+		</a><br>
+			<a href="../default/ApnsPHP_Message_Exception.html">		ApnsPHP_Message_Exception
+		</a><br>
+			<a href="../default/ApnsPHP_Push.html">		ApnsPHP_Push
+		</a><br>
+			<a href="../default/ApnsPHP_Push_Exception.html">		ApnsPHP_Push_Exception
+		</a><br>
+			<a href="../default/ApnsPHP_Push_Server.html">		ApnsPHP_Push_Server
+		</a><br>
+			<a href="../default/ApnsPHP_Push_Server_Exception.html">		ApnsPHP_Push_Server_Exception
+		</a><br>
+			<a href="../default/CobissAPN.html">		CobissAPN
+		</a><br>
+			<a href="../default/DbConnect.html">		DbConnect
+		</a><br>
+			<a href="../default/DbFunctionsAPN.html">		DbFunctionsAPN
+		</a><br>
+			<a href="../default/DbFunctionsCommon.html">		DbFunctionsCommon
+		</a><br>
+			<a href="../default/DbFunctionsGCM.html">		DbFunctionsGCM
+		</a><br>
+			<a href="../default/DB_Connect.html">		DB_Connect
+		</a><br>
+			<a href="../default/DB_Functions.html">		DB_Functions
+		</a><br>
+			<a href="../default/DB_Functions_push.html">		DB_Functions_push
+		</a><br>
+			<a href="../default/GCMsender.html">		GCMsender
+		</a><br>
+				</div>
+		</div>
+	</div>
+
+<div id="body">
+	    		<h1>Class: DbFunctionsGCM</h1>
+	<p style="margin: 0px;">Source Location: /lib/DbFunctionsGCM.php</p>
+	
+
+<div class="leftcol">
+	<h3><a href="#class_details">Class Overview</a> <span class="smalllinenumber">[line 8]</span></h3>
+	<div id="classTree"><pre></pre>
+</div>
+	<div class="small">
+	<p>Holds all operations for managing subsriptions and messages.</p>
+		<h4>Author(s):</h4>
+	<ul>
+								<li>matjaz</li>
+						</ul>
+	<h4>Version:</h4>
+	<ul>
+								</ul>
+
+	<h4>Copyright:</h4>
+	<ul>
+								</li>
+	</div>
+</div>
+
+<div class="middlecol">
+	<h3><a href="#class_vars">Variables</a></h3>
+	<ul class="small">
+				<li><a href="../default/DbFunctionsGCM.html#var$db">$db</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#var$tokenTable">$tokenTable</a></li>
+			</ul>
+	<h3><a href="#class_consts">Constants</a></h3>
+	<ul class="small">
+			</ul>
+</div>
+<div class="rightcol">
+	<h3><a href="#class_methods">Methods</a></h3>
+	<ul class="small">
+				<li><a href="../default/DbFunctionsGCM.html#method__construct">__construct</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#method__destruct">__destruct</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methodaddMessage">addMessage</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methoddeleteMessage">deleteMessage</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methoddeleteToken">deleteToken</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methoddeleteUser">deleteUser</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methoddoesUserExist">doesUserExist</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methodgetAllMessages">getAllMessages</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methodgetAllMessagesByMember">getAllMessagesByMember</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methodgetAllMessagesByToken">getAllMessagesByToken</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methodgetAllRegistrationIds">getAllRegistrationIds</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methodgetAllRegistrationIdsByUID">getAllRegistrationIdsByUID</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methodgetDistinctTokens">getDistinctTokens</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methodgetUnreadCount">getUnreadCount</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methodmarkMessageAsRead">markMessageAsRead</a></li>
+				<li><a href="../default/DbFunctionsGCM.html#methodstoreUser">storeUser</a></li>
+			</ul>
+</div>
+
+<div id="content">
+<hr>
+	<div class="contents">
+	<h2>Child classes:</h2>
+		<dl>
+	<dt><a href="../default/DbFunctionsAPN.html">DbFunctionsAPN</a></dt>
+		<dd>Extends the DbFunctionsGCM. The constructor is overridden to change  the token table name reference.</dd>
+	</dl>
+	</p>
+	</div>
+
+	<div class="leftCol">
+    	<h2>Inherited Variables</h2>
+		<h2>Inherited Constants</h2>
+		</div>
+
+	<div class="rightCol">
+	<h2>Inherited Methods</h2>
+		</div>
+	<br clear="all">
+	<hr>
+
+	<a name="class_details"></a>
+	<h2>Class Details</h2>
+	<p align="center"><strong>Holds all operations for managing subsriptions and messages.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>author</b> - matjaz</li>
+</ul>
+	<p class="small" style="color: #334B66;">[ <a href="#top">Top</a> ]</p>
+
+	<hr>
+	<a name="class_vars"></a>
+	<h2>Class Variables</h2>
+		<a name="var$db"></a>
+	<p></p>
+	<h4>$db</h4>
+	<div class="indent">
+		<p class="linenumber">[line 10]</p>
+		<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - protected</li>
+</ul>
+		<p><b>Type:</b> mixed</p>
+		<p><b>Overrides:</b> </p>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="var$tokenTable"></a>
+	<p></p>
+	<h4>$tokenTable</h4>
+	<div class="indent">
+		<p class="linenumber">[line 12]</p>
+		<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - protected</li>
+</ul>
+		<p><b>Type:</b> mixed</p>
+		<p><b>Overrides:</b> </p>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+
+	<hr>
+	<a name="class_methods"></a>
+	<h2>Class Methods</h2>
+	
+	<a name="method__construct"></a>
+	<p></p>
+	<h3>__construct</h3>
+	<div class="indent">
+		<p>
+		<code>DbFunctionsGCM __construct(
+)</code>
+		</p>
+	
+		<p class="linenumber">[line 16]</p>
+		<p align="center"><strong>Class constuctor
+</strong></p>
+<p>connects to database</p>		
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../default/DbFunctionsAPN.html#method__construct">DbFunctionsAPN::__construct()</a></dt>
+		<dd></dd>
+	</dl>
+	</p>
+	
+	<h4>Parameters:</h4>
+	<ul>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="method__destruct"></a>
+	<p></p>
+	<h3>__destruct</h3>
+	<div class="indent">
+		<p>
+		<code>void __destruct(
+)</code>
+		</p>
+	
+		<p class="linenumber">[line 24]</p>
+				
+	
+	<h4>Parameters:</h4>
+	<ul>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodaddMessage"></a>
+	<p></p>
+	<h3>addMessage</h3>
+	<div class="indent">
+		<p>
+		<code>void addMessage(
+
+$title, 
+$message, 
+$acr_, 
+$memid)</code>
+		</p>
+	
+		<p class="linenumber">[line 137]</p>
+		<p align="center"><strong>Stores a message
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type"></span>
+		<b>$title</b> 
+		- 
+		</li>
+			<li>
+		<span class="type"></span>
+		<b>$message</b> 
+		- 
+		</li>
+			<li>
+		<span class="type"></span>
+		<b>$acr_</b> 
+		- 
+		</li>
+			<li>
+		<span class="type"></span>
+		<b>$memid</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methoddeleteMessage"></a>
+	<p></p>
+	<h3>deleteMessage</h3>
+	<div class="indent">
+		<p>
+		<code>void deleteMessage(
+
+$mid)</code>
+		</p>
+	
+		<p class="linenumber">[line 230]</p>
+		<p align="center"><strong>Delete the message
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type"></span>
+		<b>$mid</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methoddeleteToken"></a>
+	<p></p>
+	<h3>deleteToken</h3>
+	<div class="indent">
+		<p>
+		<code>void deleteToken(
+
+$dev_id)</code>
+		</p>
+	
+		<p class="linenumber">[line 93]</p>
+		<p align="center"><strong>Delets all subscriptions (app uninstalled)
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type"></span>
+		<b>$dev_id</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methoddeleteUser"></a>
+	<p></p>
+	<h3>deleteUser</h3>
+	<div class="indent">
+		<p>
+		<code>void deleteUser(
+
+$acr_, 
+$memid, 
+$dev_id)</code>
+		</p>
+	
+		<p class="linenumber">[line 71]</p>
+		<p align="center"><strong>Delets the subscription
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type"></span>
+		<b>$acr_</b> 
+		- 
+		</li>
+			<li>
+		<span class="type"></span>
+		<b>$memid</b> 
+		- 
+		</li>
+			<li>
+		<span class="type"></span>
+		<b>$dev_id</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methoddoesUserExist"></a>
+	<p></p>
+	<h3>doesUserExist</h3>
+	<div class="indent">
+		<p>
+		<code>void doesUserExist(
+
+$acr_, 
+$memid, 
+$dev_id)</code>
+		</p>
+	
+		<p class="linenumber">[line 52]</p>
+		<p align="center"><strong>Check if the device is subscribed &lt;p&gt;Returns TRUE or FALSE&lt;/p&gt;
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type"></span>
+		<b>$acr_</b> 
+		- 
+		</li>
+			<li>
+		<span class="type"></span>
+		<b>$memid</b> 
+		- 
+		</li>
+			<li>
+		<span class="type"></span>
+		<b>$dev_id</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetAllMessages"></a>
+	<p></p>
+	<h3>getAllMessages</h3>
+	<div class="indent">
+		<p>
+		<code>void getAllMessages(
+
+$acr_, 
+$memId)</code>
+		</p>
+	
+		<p class="linenumber">[line 199]</p>
+		<p align="center"><strong><strong>Deprecated&lt;/p&gt;</strong> Get all messages for a member.
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type"></span>
+		<b>$acr_</b> 
+		- 
+		</li>
+			<li>
+		<span class="type"></span>
+		<b>$memId</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetAllMessagesByMember"></a>
+	<p></p>
+	<h3>getAllMessagesByMember</h3>
+	<div class="indent">
+		<p>
+		<code>void getAllMessagesByMember(
+
+$acr_, 
+$memId)</code>
+		</p>
+	
+		<p class="linenumber">[line 187]</p>
+		<p align="center"><strong>Get all messages for a member
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type"></span>
+		<b>$acr_</b> 
+		- 
+		</li>
+			<li>
+		<span class="type"></span>
+		<b>$memId</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetAllMessagesByToken"></a>
+	<p></p>
+	<h3>getAllMessagesByToken</h3>
+	<div class="indent">
+		<p>
+		<code>void getAllMessagesByToken(
+
+$token)</code>
+		</p>
+	
+		<p class="linenumber">[line 176]</p>
+		<p align="center"><strong>Get all messages for all device subscriptions
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type"></span>
+		<b>$token</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetAllRegistrationIds"></a>
+	<p></p>
+	<h3>getAllRegistrationIds</h3>
+	<div class="indent">
+		<p>
+		<code>void getAllRegistrationIds(
+
+$acr_, 
+$memid)</code>
+		</p>
+	
+		<p class="linenumber">[line 116]</p>
+		<p align="center"><strong>Gets a list of registration IDs of a specified member
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type"></span>
+		<b>$acr_</b> 
+		- 
+		</li>
+			<li>
+		<span class="type"></span>
+		<b>$memid</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetAllRegistrationIdsByUID"></a>
+	<p></p>
+	<h3>getAllRegistrationIdsByUID</h3>
+	<div class="indent">
+		<p>
+		<code>void getAllRegistrationIdsByUID(
+
+$uid)</code>
+		</p>
+	
+		<p class="linenumber">[line 100]</p>
+		<p align="center"><strong>Gets a list of registration IDs of a specified member
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type"></span>
+		<b>$uid</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetDistinctTokens"></a>
+	<p></p>
+	<h3>getDistinctTokens</h3>
+	<div class="indent">
+		<p>
+		<code>void getDistinctTokens(
+)</code>
+		</p>
+	
+		<p class="linenumber">[line 239]</p>
+		<p align="center"><strong>Get all unique tokens - usefull when displaying subscribed devices
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodgetUnreadCount"></a>
+	<p></p>
+	<h3>getUnreadCount</h3>
+	<div class="indent">
+		<p>
+		<code>void getUnreadCount(
+
+$tokenAPN)</code>
+		</p>
+	
+		<p class="linenumber">[line 154]</p>
+		<p align="center"><strong>Get unread messages count for all device subscriptions
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type"></span>
+		<b>$tokenAPN</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodmarkMessageAsRead"></a>
+	<p></p>
+	<h3>markMessageAsRead</h3>
+	<div class="indent">
+		<p>
+		<code>void markMessageAsRead(
+
+$mid)</code>
+		</p>
+	
+		<p class="linenumber">[line 221]</p>
+		<p align="center"><strong>Mark message as read
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type"></span>
+		<b>$mid</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+	<a name="methodstoreUser"></a>
+	<p></p>
+	<h3>storeUser</h3>
+	<div class="indent">
+		<p>
+		<code>void storeUser(
+
+$acr_, 
+$memid, 
+$dev_id)</code>
+		</p>
+	
+		<p class="linenumber">[line 29]</p>
+		<p align="center"><strong>Storing new user
+</strong></p>
+<h4>Tags:</h4>
+<ul>
+	<li><b>access</b> - public</li>
+</ul>
+		
+	
+	<h4>Parameters:</h4>
+	<ul>
+			<li>
+		<span class="type"></span>
+		<b>$acr_</b> 
+		- 
+		</li>
+			<li>
+		<span class="type"></span>
+		<b>$memid</b> 
+		- 
+		</li>
+			<li>
+		<span class="type"></span>
+		<b>$dev_id</b> 
+		- 
+		</li>
+		</ul>
+	</div>
+	<p class="top">[ <a href="#top">Top</a> ]</p>
+
+	<hr>
+	<a name="class_consts"></a>
+	<h2>Class Constants</h2>
+	</div>
+	<div id="credit">
+		<hr>
+		Documentation generated on Wed, 04 Sep 2013 18:58:33 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.4</a>
+	</div>
+</div>
+</body>
+</html>
